@@ -1,0 +1,16 @@
+.__backup .backup-cont {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-transform: uppercase;
+}
+.__backup .backup-cont .h6 {
+  margin: 0;
+}
+.__backup .backup-cont p {
+  margin: 0;
+}/*# sourceMappingURL=Backup.css.map */

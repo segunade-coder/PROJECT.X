@@ -1,0 +1,398 @@
+.__fees {
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (min-width: 800px) {
+  .__fees {
+    height: auto;
+    margin: 0rem 0 2rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .__fees {
+    padding: 0;
+  }
+}
+.__fees .search-container {
+  display: flex;
+  width: 100%;
+  padding: 1rem 0;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1rem 0.3rem;
+}
+@media only screen and (min-width: 800px) {
+  .__fees .search-container {
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    padding-left: 0.5rem;
+    padding-top: 1rem;
+  }
+}
+@media only screen and (min-width: 970px) {
+  .__fees .search-container {
+    padding-right: 1.5rem;
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 860px) {
+  .__fees .search-container {
+    padding-left: 0.3rem;
+    padding-right: 0.5rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .__fees .search-container {
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+}
+.__fees .search-container .input-filter-cont {
+  flex: 1;
+  width: 100%;
+  border-radius: 5px;
+  padding: 0rem;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 0;
+  max-height: 45px;
+  position: relative;
+}
+.__fees .search-container .input-filter-cont span {
+  width: 100%;
+  min-width: 250px;
+}
+.__fees .search-container .input-filter-cont input {
+  width: 100%;
+}
+.__fees .search-container .p-dropdown {
+  flex: 1;
+  width: 100%;
+  min-width: 150px;
+}
+@media only screen and (min-width: 970px) {
+  .__fees .search-container .p-dropdown {
+    max-width: 100%;
+  }
+}
+.__fees .search-container .filter {
+  background-color: #c5d7e5;
+  border: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.__fees .search-container .filter:focus {
+  background-color: transparent;
+  border: 1px solid gray;
+}
+.__fees .search-container .btn-cont {
+  display: flex;
+  flex-wrap: wrap;
+}
+.__fees .search-container .btn-cont button {
+  transform: scale(0.87);
+}
+.__fees .balance-table {
+  min-height: 300px;
+}
+@media only screen and (min-width: 800px) {
+  .__fees .balance-table {
+    padding-left: 0rem;
+    padding-top: 0.5rem;
+  }
+}
+@media screen and (max-width: 860px) {
+  .__fees .balance-table {
+    padding-left: 0.3rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .__fees .balance-table {
+    max-width: 350px;
+    overflow: auto;
+    padding-left: 0;
+  }
+}
+.__fees .balance-table table {
+  border: 1px solid gainsboro;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14.5px;
+  margin: 0.5rem 0;
+  padding: 1rem 0;
+}
+@media only screen and (min-width: 800px) {
+  .__fees .balance-table table {
+    font-size: 17px;
+    padding: 2rem;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .__fees .balance-table table {
+    width: 100%;
+  }
+}
+.__fees .balance-table table tr {
+  text-transform: uppercase;
+}
+.__fees .balance-table table tr th {
+  text-align: center;
+}
+.__fees .balance-table table tr td,
+.__fees .balance-table table tr th {
+  padding: 0.2rem 0.12rem;
+  font-family: "calibri Light";
+  vertical-align: middle;
+  text-align: center;
+}
+@media only screen and (min-width: 800px) {
+  .__fees .balance-table table tr td,
+  .__fees .balance-table table tr th {
+    padding: 0.5rem;
+    font-size: 0.89rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .__fees .balance-table table tr td,
+  .__fees .balance-table table tr th {
+    font-size: 0.65rem;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .__fees .balance-table table tr td:nth-child(1) {
+    text-align: left;
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 970px) {
+  .__fees .balance-table table tr td:nth-child(1) {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .__fees .balance-table table tr td:nth-child(1) {
+    width: 22%;
+  }
+}
+@media screen and (max-width: 870px) {
+  .__fees .balance-table table tr td:nth-child(1) {
+    width: 22%;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .__fees .balance-table table tr td:nth-child(1),
+  .__fees .balance-table table tr th:nth-child(1),
+  .__fees .balance-table table tr td:nth-child(3),
+  .__fees .balance-table table tr th:nth-child(3) {
+    text-align: left;
+  }
+}
+.__fees .balance-table table tr .action-cont {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.1rem;
+}
+@media only screen and (min-width: 800px) {
+  .__fees .balance-table table tr .action-cont {
+    padding: 0.3rem;
+  }
+}
+.__fees .balance-table table tr .action-cont div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.22rem;
+  border-radius: 3px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
+@media only screen and (max-width: 400px) {
+  .__fees .balance-table table tr .action-cont div {
+    font-size: x-small;
+    padding: 0.13;
+  }
+}
+.__fees .balance-table table tr .action-cont div svg {
+  margin-left: 0.3rem;
+}
+@media screen and (max-width: 500px) {
+  .__fees .balance-table table tr .action-cont div svg {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .__fees .balance-table table tr .action-cont div svg {
+    margin-left: 0;
+  }
+}
+.__fees .balance-table table tr:nth-child(even) {
+  background-color: #e3e5ea;
+}
+.__fees .balance-table table:has(.loading) {
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+.__fees .balance-table .pagination-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  overflow: auto;
+  flex-wrap: wrap;
+  padding: 0.5rem 0 0;
+}
+.__fees .balance-table::-webkit-scrollbar {
+  width: 0.1rem !important;
+  height: 0.4rem;
+}
+.__fees .balance-table::-webkit-scrollbar-track:hover {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.__fees .balance-table::-webkit-scrollbar-thumb:hover {
+  background-color: gray;
+  outline: none;
+}
+.__fees .fee-modal {
+  padding: 0.2rem 0;
+}
+@media only screen and (min-width: 800px) {
+  .__fees .fee-modal {
+    padding: 1.5rem 0;
+  }
+}
+.__fees .fee-modal .modal-body {
+  overflow: hidden;
+  width: 70%;
+  margin-top: 28rem;
+  top: 0;
+}
+@media only screen and (min-width: 800px) {
+  .__fees .fee-modal .modal-body {
+    width: 700px;
+    border-radius: 10px;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    margin-top: 17.5rem;
+  }
+}
+@media only screen and (min-width: 970px) {
+  .__fees .fee-modal .modal-body {
+    width: 800px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .__fees .fee-modal .modal-body {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .__fees .fee-modal .modal-body {
+    width: 90%;
+  }
+}
+.__fees .fee-modal .modal-body .content form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@media only screen and (min-width: 800px) {
+  .__fees .fee-modal .modal-body .content form {
+    gap: 1rem;
+  }
+}
+.__fees .fee-modal .modal-body .content form .info {
+  background-color: #5499dd;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.__fees .fee-modal .modal-body .content form .input-cont {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+@media only screen and (min-width: 800px) {
+  .__fees .fee-modal .modal-body .content form .input-cont {
+    flex-direction: row;
+  }
+}
+.__fees .fee-modal .modal-body .content form .input-cont .p-calendar input {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.__fees .fee-modal .modal-body .content form .input-cont .p-calendar button {
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+.__fees .fee-modal .modal-body .content form .input-cont .p-calendar button span {
+  width: initial;
+}
+.__fees .fee-modal .modal-body .content form .input-cont label {
+  width: 100%;
+  color: #6a6a6a;
+}
+@media only screen and (max-width: 400px) {
+  .__fees .fee-modal .modal-body .content form .input-cont label {
+    font-size: small;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .__fees .fee-modal .modal-body .content form .input-cont label {
+    width: 25%;
+  }
+}
+.__fees .fee-modal .modal-body .content form .input-cont span {
+  width: 100%;
+}
+@media only screen and (min-width: 800px) {
+  .__fees .fee-modal .modal-body .content form .input-cont span {
+    width: 100%;
+  }
+}
+.__fees .fee-modal .modal-body .content form .input-cont input,
+.__fees .fee-modal .modal-body .content form .input-cont textarea {
+  font-size: small;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid gainsboro;
+  width: 100%;
+  resize: none;
+  color: #6a6a6a;
+}
+.__fees .fee-modal .modal-body .content form .input-cont input:disabled,
+.__fees .fee-modal .modal-body .content form .input-cont textarea:disabled {
+  border: 1px solid dodgerblue;
+}
+@media only screen and (min-width: 800px) {
+  .__fees .fee-modal .modal-body .content form .input-cont input:disabled,
+  .__fees .fee-modal .modal-body .content form .input-cont textarea:disabled {
+    padding: 0.6rem;
+  }
+}
+.__fees .fee-modal .modal-body .content form .input-cont textarea,
+.__fees .fee-modal .modal-body .content form .input-cont input:disabled {
+  padding: 1rem 0.6rem;
+}
+.__fees .fee-modal .modal-body .content form .input-cont input[type=number] {
+  padding: 1rem 0.6rem;
+}
+.__fees .fee-modal .modal-body .content form .input-cont #payment_for,
+.__fees .fee-modal .modal-body .content form .input-cont #payment_method,
+.__fees .fee-modal .modal-body .content form .input-cont #wallet {
+  width: 100%;
+}
+.__fees .fee-modal .modal-body .content form .input-cont select {
+  padding: 0.76rem;
+  border: none;
+  border: 1px solid gainsboro;
+  width: 100%;
+  font-size: small;
+}/*# sourceMappingURL=fees.css.map */

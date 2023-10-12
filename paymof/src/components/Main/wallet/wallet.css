@@ -1,0 +1,404 @@
+.__wallet {
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (min-width: 760px) {
+  .__wallet {
+    height: auto;
+    margin: 0rem 0 2rem;
+  }
+}
+.__wallet .p-speeddial {
+  top: -50px;
+  transform: scale(0.7);
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 2rem;
+}
+@media only screen and (min-width: 760px) {
+  .__wallet .p-speeddial {
+    top: -50px;
+    transform: scale(0.8);
+    margin-left: 3rem;
+  }
+}
+@media screen and (min-width: 1115px) {
+  .__wallet .p-speeddial {
+    margin-left: 4rem;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .__wallet .p-speeddial {
+    margin-left: 6rem;
+  }
+}
+.__wallet .wallets {
+  margin-top: -2.7rem;
+}
+.__wallet .cards-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+}
+.__wallet .cards-container .card {
+  flex: 1;
+  min-width: 240px;
+  height: 120px;
+  border-radius: 5px;
+  padding: 1rem 0.5rem;
+  border: none;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  padding: 0.5rem;
+  background-color: #65a185;
+  color: white;
+}
+@media screen and (min-width: 580px) {
+  .__wallet .cards-container .card {
+    flex: 0;
+  }
+}
+.__wallet .cards-container .card:nth-child(even) {
+  background-color: #5d778b;
+}
+.__wallet .cards-container .card:nth-child(1) {
+  background-color: #8a3337;
+}
+.__wallet .cards-container .card:nth-child(5) {
+  background-color: #5a5a5a;
+}
+.__wallet .cards-container .card .details {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.__wallet .cards-container .card .details .amount {
+  font-size: 1.1rem;
+}
+.__wallet .cards-container .card .details .name {
+  text-transform: capitalize;
+  margin-top: 0.5rem;
+  font-size: small;
+}
+.__wallet .cards-container .card .icon {
+  width: 50%;
+  display: flex;
+  align-items: flex-end;
+  align-self: center;
+  padding-right: 0.5rem;
+  flex-direction: column;
+}
+.__wallet .cards-container .card .icon small {
+  width: 100%;
+  font-size: 0.67rem;
+  text-align: right;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.__wallet .cards-container .card .icon small i {
+  margin-left: 0.5rem;
+}
+.__wallet .expenses .add {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: -1rem;
+}
+.__wallet .expenses .add i {
+  cursor: pointer;
+}
+.__wallet .expenses .add span {
+  margin-left: 0.6rem;
+  cursor: pointer;
+}
+.__wallet .expenses .dropdown-wllet-chart {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.__wallet .expenses .dropdown-wllet-chart .p-dropdown {
+  width: 100%;
+}
+@media only screen and (min-width: 760px) {
+  .__wallet .expenses .dropdown-wllet-chart .p-dropdown {
+    width: 300px;
+  }
+}
+.__wallet .expenses .chart-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 760px) {
+  .__wallet .expenses .chart-container {
+    flex-wrap: nowrap;
+  }
+}
+.__wallet .expenses .chart-container .chart {
+  flex: 1;
+  width: 100%;
+}
+@media only screen and (min-width: 760px) {
+  .__wallet .expenses .chart-container .chart {
+    width: initial;
+  }
+}
+.__wallet .wallet-add-modal {
+  padding: 0.2rem 0;
+}
+@media only screen and (min-width: 760px) {
+  .__wallet .wallet-add-modal {
+    padding: 1.5rem 0;
+  }
+}
+.__wallet .wallet-add-modal .modal-body {
+  overflow: hidden;
+  width: 70%;
+  top: 0;
+}
+@media only screen and (min-width: 760px) {
+  .__wallet .wallet-add-modal .modal-body {
+    width: 550px;
+    border-radius: 10px;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    margin-top: 0.5rem;
+  }
+}
+@media only screen and (min-width: 760px) {
+  .__wallet .wallet-add-modal .modal-body {
+    padding: 1rem;
+  }
+}
+@media only screen and (min-width: 970px) {
+  .__wallet .wallet-add-modal .modal-body {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .__wallet .wallet-add-modal .modal-body {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .__wallet .wallet-add-modal .modal-body {
+    width: 90%;
+  }
+}
+.__wallet .wallet-add-modal .modal-body .content form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@media only screen and (min-width: 760px) {
+  .__wallet .wallet-add-modal .modal-body .content form {
+    gap: 1rem;
+  }
+}
+.__wallet .wallet-add-modal .modal-body .content form .input-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+@media only screen and (min-width: 760px) {
+  .__wallet .wallet-add-modal .modal-body .content form .input-cont {
+    flex-direction: row;
+  }
+}
+.__wallet .wallet-add-modal .modal-body .content form .input-cont label {
+  width: 100%;
+}
+@media only screen and (max-width: 400px) {
+  .__wallet .wallet-add-modal .modal-body .content form .input-cont label {
+    font-size: small;
+  }
+}
+@media only screen and (min-width: 760px) {
+  .__wallet .wallet-add-modal .modal-body .content form .input-cont label {
+    width: 35%;
+  }
+}
+.__wallet .wallet-add-modal .modal-body .content form .input-cont input,
+.__wallet .wallet-add-modal .modal-body .content form .input-cont textarea {
+  font-size: small;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid gainsboro;
+  width: 100%;
+  resize: none;
+}
+.__wallet .wallet-add-modal .modal-body .content form .input-cont input:disabled,
+.__wallet .wallet-add-modal .modal-body .content form .input-cont textarea:disabled {
+  border: 1px solid dodgerblue;
+}
+@media only screen and (min-width: 760px) {
+  .__wallet .wallet-add-modal .modal-body .content form .input-cont input:disabled,
+  .__wallet .wallet-add-modal .modal-body .content form .input-cont textarea:disabled {
+    padding: 0.6rem;
+  }
+}
+.__wallet .transfer-modal,
+.__wallet .switch-modal,
+.__wallet .wallet-add-expense {
+  padding: 0.2rem 0;
+}
+@media only screen and (min-width: 760px) {
+  .__wallet .transfer-modal,
+  .__wallet .switch-modal,
+  .__wallet .wallet-add-expense {
+    padding: 1.5rem 0;
+  }
+}
+.__wallet .transfer-modal .modal-body,
+.__wallet .switch-modal .modal-body,
+.__wallet .wallet-add-expense .modal-body {
+  overflow: hidden;
+  width: 70%;
+  top: 0;
+}
+@media only screen and (min-width: 760px) {
+  .__wallet .transfer-modal .modal-body,
+  .__wallet .switch-modal .modal-body,
+  .__wallet .wallet-add-expense .modal-body {
+    width: 550px;
+    border-radius: 10px;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    margin-top: 0.5rem;
+  }
+}
+@media only screen and (min-width: 970px) {
+  .__wallet .transfer-modal .modal-body,
+  .__wallet .switch-modal .modal-body,
+  .__wallet .wallet-add-expense .modal-body {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .__wallet .transfer-modal .modal-body,
+  .__wallet .switch-modal .modal-body,
+  .__wallet .wallet-add-expense .modal-body {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .__wallet .transfer-modal .modal-body,
+  .__wallet .switch-modal .modal-body,
+  .__wallet .wallet-add-expense .modal-body {
+    width: 90%;
+  }
+}
+.__wallet .transfer-modal .modal-body .content form,
+.__wallet .switch-modal .modal-body .content form,
+.__wallet .wallet-add-expense .modal-body .content form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@media only screen and (min-width: 760px) {
+  .__wallet .transfer-modal .modal-body .content form,
+  .__wallet .switch-modal .modal-body .content form,
+  .__wallet .wallet-add-expense .modal-body .content form {
+    gap: 1rem;
+  }
+}
+.__wallet .transfer-modal .modal-body .content form .info,
+.__wallet .switch-modal .modal-body .content form .info,
+.__wallet .wallet-add-expense .modal-body .content form .info {
+  background-color: #5499dd;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.__wallet .transfer-modal .modal-body .content form .input-cont,
+.__wallet .switch-modal .modal-body .content form .input-cont,
+.__wallet .wallet-add-expense .modal-body .content form .input-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+@media only screen and (min-width: 760px) {
+  .__wallet .transfer-modal .modal-body .content form .input-cont,
+  .__wallet .switch-modal .modal-body .content form .input-cont,
+  .__wallet .wallet-add-expense .modal-body .content form .input-cont {
+    flex-direction: row;
+  }
+}
+.__wallet .transfer-modal .modal-body .content form .input-cont label,
+.__wallet .switch-modal .modal-body .content form .input-cont label,
+.__wallet .wallet-add-expense .modal-body .content form .input-cont label {
+  width: 100%;
+}
+@media only screen and (max-width: 400px) {
+  .__wallet .transfer-modal .modal-body .content form .input-cont label,
+  .__wallet .switch-modal .modal-body .content form .input-cont label,
+  .__wallet .wallet-add-expense .modal-body .content form .input-cont label {
+    font-size: small;
+  }
+}
+@media only screen and (min-width: 760px) {
+  .__wallet .transfer-modal .modal-body .content form .input-cont label,
+  .__wallet .switch-modal .modal-body .content form .input-cont label,
+  .__wallet .wallet-add-expense .modal-body .content form .input-cont label {
+    width: 40%;
+  }
+}
+.__wallet .transfer-modal .modal-body .content form .input-cont #to,
+.__wallet .transfer-modal .modal-body .content form .input-cont #from,
+.__wallet .transfer-modal .modal-body .content form .input-cont #expense-amount,
+.__wallet .switch-modal .modal-body .content form .input-cont #to,
+.__wallet .switch-modal .modal-body .content form .input-cont #from,
+.__wallet .switch-modal .modal-body .content form .input-cont #expense-amount,
+.__wallet .wallet-add-expense .modal-body .content form .input-cont #to,
+.__wallet .wallet-add-expense .modal-body .content form .input-cont #from,
+.__wallet .wallet-add-expense .modal-body .content form .input-cont #expense-amount {
+  width: 100%;
+}
+.__wallet .transfer-modal .modal-body .content form .input-cont textarea,
+.__wallet .switch-modal .modal-body .content form .input-cont textarea,
+.__wallet .wallet-add-expense .modal-body .content form .input-cont textarea {
+  font-size: small;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid gainsboro;
+  width: 100%;
+  resize: none;
+}
+.__wallet .transfer-modal .modal-body .content form .input-cont textarea:disabled,
+.__wallet .switch-modal .modal-body .content form .input-cont textarea:disabled,
+.__wallet .wallet-add-expense .modal-body .content form .input-cont textarea:disabled {
+  border: 1px solid dodgerblue;
+}
+@media only screen and (min-width: 760px) {
+  .__wallet .transfer-modal .modal-body .content form .input-cont textarea:disabled,
+  .__wallet .switch-modal .modal-body .content form .input-cont textarea:disabled,
+  .__wallet .wallet-add-expense .modal-body .content form .input-cont textarea:disabled {
+    padding: 0.6rem;
+  }
+}
+.__wallet .transfer-modal .modal-body .content form .input-cont #amount,
+.__wallet .switch-modal .modal-body .content form .input-cont #amount,
+.__wallet .wallet-add-expense .modal-body .content form .input-cont #amount {
+  width: 100%;
+}
+.__wallet .transfer-modal .modal-body .content form .input-cont select,
+.__wallet .switch-modal .modal-body .content form .input-cont select,
+.__wallet .wallet-add-expense .modal-body .content form .input-cont select {
+  padding: 0.76rem;
+  border: none;
+  border: 1px solid gainsboro;
+  width: 100%;
+  font-size: small;
+  border-radius: 5px;
+}/*# sourceMappingURL=wallet.css.map */

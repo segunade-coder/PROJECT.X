@@ -1,0 +1,486 @@
+@mixin pad {
+  @media only screen and (max-width: 800px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media only screen and (max-width: 1100px) {
+    @content;
+  }
+}
+@mixin medium {
+  @media only screen and (max-width: 700px) {
+    @content;
+  }
+}
+@mixin small {
+  @media only screen and (max-width: 400px) {
+    @content;
+  }
+}
+:root {
+  --custom-login-bg: #1f3f5b;
+  --custom-login-text-lightdark: #5a5a5a;
+}
+$color: var(--custom-login-bg);
+.__custom-login {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  position: relative;
+
+  .login-container {
+    width: 100%;
+    background-color: #f3eef2;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    @include medium {
+      background-color: white;
+      padding: 0 0;
+      margin: 0;
+      height: 100%;
+    }
+    h2.heading {
+      font-family: "Poppins-SemiBold";
+
+      @include medium {
+        display: none;
+      }
+    }
+    .grid-2 {
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      margin-top: 1rem;
+      position: relative;
+
+      @include desktop {
+        width: 80%;
+      }
+
+      @include pad {
+        width: 90%;
+      }
+      @include medium {
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+        padding: 5rem 0 2rem;
+        background-color: #fff;
+        z-index: 1;
+      }
+
+      .form-area {
+        flex: 1;
+        width: 50%;
+        padding: 2.5rem;
+        background-color: var(--custom-login-bg, #1f3f5b);
+        color: white;
+        position: relative;
+        z-index: 1;
+
+        @include medium {
+          flex: 0;
+          width: 90%;
+          background-color: transparent;
+          color: black;
+          // filter:blur(20px)
+        }
+        .headling-cont {
+          width: 100%;
+          display: flex;
+          flex-wrap: nowrap;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0.5rem;
+          font-family: "Poppins-Medium";
+
+          h2 {
+            font-size: 30px;
+            text-transform: uppercase;
+            // color:#1F3F5B;
+            @include medium {
+              color: var(--custom-login-bg, #1f3f5b);
+            }
+          }
+          span {
+            position: relative;
+            cursor: pointer;
+            &::before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              left: 0;
+              top: 0;
+              background: rgba(255, 255, 255, 0.2);
+              transform: scale(1.8);
+              border-radius: 50%;
+
+              @include medium {
+                background: rgba(0, 0, 0, 0.1);
+              }
+            }
+            @include medium {
+              position: absolute;
+              bottom: 0;
+              //    background:rgba(0,0,0,0.1);
+              left: 50%;
+              transform: translateX(-20px);
+            }
+
+            svg {
+              @include medium {
+                fill: var(--custom-login-bg);
+              }
+            }
+          }
+        }
+        form {
+          font-family: "Poppins-Regular";
+          .form-input-icons {
+            width: 100%;
+            position: relative;
+            margin-top: 2.5rem;
+            display: flex;
+            align-items: center;
+            // background-color: rebeccapurple;
+            padding: 1rem 0 0.3rem;
+
+            &:nth-child(2) {
+              margin-bottom: 2rem;
+            }
+
+            &::before {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 2px;
+              background-color: #8b8b8b;
+
+              @include medium {
+                background-color: var(--custom-login-text-lightdark, gray);
+              }
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 0%;
+              height: 2px;
+              background-color: #fff;
+              transition: 0.5s all ease;
+
+              @include medium {
+                background-color: var(--custom-login-bg, #1f3f5b);
+              }
+            }
+
+            &:focus-within {
+              .icon-up {
+                transition: 0.3s all ease;
+                transform: translateY(-30px);
+                width: 18px;
+                fill: #fff;
+
+                @include medium {
+                  fill: var(--custom-login-bg, #1f3f5b);
+                }
+              }
+              &::after {
+                width: 100%;
+              }
+              input {
+                padding: 0 0 0.5rem 0.2rem;
+              }
+              input::placeholder {
+                color: transparent;
+                text-indent: 0;
+              }
+            }
+            &:has(input:not(:placeholder-shown)) {
+              &::after {
+                width: 100%;
+              }
+            }
+            input:not(:placeholder-shown) ~ span .icon-up {
+              transition: 0.3s all ease;
+              transform: translateY(-30px);
+              width: 18px;
+              fill: white;
+
+              @include medium {
+                fill: var(--custom-login-bg, #1f3f5b);
+              }
+            }
+            input:not(:placeholder-shown) {
+              text-indent: 0px;
+              padding: 0 0 0.5rem 0.2rem;
+            }
+
+            svg {
+              transition: 0.3s all ease;
+              position: absolute;
+              left: 0;
+              top: 0;
+              top: 25%;
+
+              @include medium {
+                fill: var(--custom-login-text-lightdark, gray);
+                top: 30%;
+              }
+            }
+            .show-pass {
+              left: inherit !important;
+              right: 0 !important;
+              cursor: pointer;
+              top: 40% !important;
+            }
+            input {
+              width: 100%;
+              border: none;
+              padding: 0 0 0.5rem 0.2rem;
+              outline: none;
+              font-size: 16px;
+              background-color: transparent;
+              color: white;
+              font-size: 15px;
+
+              &::placeholder {
+                text-indent: 30px;
+                color: #fefefe;
+
+                @include medium {
+                  color: black;
+                }
+              }
+              @include medium {
+                color: black;
+              }
+            }
+          }
+          .checkbox-form {
+            display: flex;
+            flex-wrap: nowrap;
+            margin: 1.2rem 0 0.5rem;
+            justify-content: space-between;
+            font-size: 12px;
+
+            @include medium {
+              margin-bottom: 2rem;
+            }
+            label {
+              font-family: "Poppins-Regular";
+              font-size: 13px;
+              display: flex;
+              align-items: center;
+
+              * {
+                margin-right: 0.2rem;
+              }
+            }
+            a {
+              text-decoration: none;
+              color: white;
+
+              @include medium {
+                color: black;
+              }
+            }
+          }
+          button[type="submit"] {
+            width: 100%;
+            // border: none;
+            // padding: 0.5rem 1.5rem;
+            // background: white;
+            // border-radius: 50px;
+            // position: relative;
+            // transition: 0.2s all ease;
+            // &::before {
+            //   content: "";
+            //   width: 100%;
+            //   height: 100%;
+            //   position: absolute;
+            //   background: white;
+            //   left: 0;
+            //   top: 0;
+            //   border-radius: 50px;
+            //   transform: scale(0);
+            //   z-index: -2;
+            // }
+
+            @include medium {
+              background-color: var(--custom-login-bg, #1f3f5b);
+              border-radius: 0;
+              padding: 0.7rem 1.5rem;
+              color: white;
+            }
+          }
+        }
+      }
+      .discription-image {
+        flex: 1;
+        min-width: 50%;
+        max-width: 50%;
+        width: 50%;
+        height: 100%;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: "Poppins-Regular";
+        // background: linear-gradient(
+        //     180deg,
+        //     rgba(0, 0, 0, 0.85),
+        //     rgba(20, 46, 70, 0.55),
+        //     rgba(0, 0, 0, 0.4)
+        //   ),
+        // url("../../images/raghav-verma-KusC_XP46Ds-unsplash.jpg") no-repeat;
+        background: white;
+        background-size: cover;
+        background-position: top center;
+        // padding: 1rem 0;
+        @include medium {
+          flex: 0;
+          width: 90%;
+          min-width: 90%;
+          max-width: 90%;
+          background: none;
+          background-color: transparent;
+        }
+        h2 {
+          font-weight: bold;
+          // color: white;
+          // padding-top: 1rem;
+          @include medium {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--custom-login-text-lightdark, #232323);
+          }
+        }
+        small {
+          font-size: 1rem;
+          display: block;
+          text-align: center;
+          width: 70%;
+          // color: white;
+          @include medium {
+            margin: auto;
+            font-size: 1rem;
+            padding: 1rem 0;
+            color: #4a4a4a;
+          }
+        }
+
+        .school-details {
+          margin: 2.5em 0;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding: 0.5rem 2rem;
+
+          @include medium {
+            margin: 0;
+          }
+          span {
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+              transform: scale(1.5);
+              overflow: hidden;
+            }
+
+            &:has(svg) {
+              &::before {
+                border: 2px solid #504c4c;
+
+                @include medium {
+                  display: none;
+                }
+              }
+            }
+            svg {
+              // fill: white;
+              @include medium {
+                fill: var(--custom-login-bg);
+                margin-bottom: 1rem;
+              }
+            }
+            img {
+              width: 100%;
+              max-width: 100px;
+              height: 100px;
+              border-radius: 50%;
+              transform: scale(1.45);
+              object-fit: cover;
+
+              @include medium {
+                display: none;
+              }
+            }
+          }
+          .school-name {
+            font-family: "Poppins-Regular";
+            text-transform: capitalize;
+            font-weight: 500;
+            font-size: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+            // color: white;
+            @include medium {
+              color: var(--custom-login-text-lightdark);
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.loading-state {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.loading-state.error {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  color: #5a5a5a;
+
+  .error-inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #5a5a5a;
+    flex-direction: column;
+  }
+}

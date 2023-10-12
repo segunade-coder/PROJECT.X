@@ -1,0 +1,14 @@
+div.box {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+  padding: 1rem 1.5rem 0.5rem;
+}
+div.box h5 {
+  font-weight: bold;
+}
+div.box i + div {
+  margin: 1rem 0;
+}/*# sourceMappingURL=box.css.map */

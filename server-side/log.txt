@@ -1,0 +1,20 @@
+App is live. ✨  by user, on Monday, October 9, 2023 at 9:41:54 AM GMT+1
+App started. Connected to apache server succesfully  by user, on Monday, October 9, 2023 at 9:41:55 AM GMT+1
+App is live. ✨  by user, on Monday, October 9, 2023 at 9:42:52 AM GMT+1
+App started. Connected to apache server succesfully  by user, on Monday, October 9, 2023 at 9:42:52 AM GMT+1
+The session has been destroyed!  by user, on Monday, October 9, 2023 at 9:43:52 AM GMT+1
+Login succesful  by admin global kids academy, on Monday, October 9, 2023 at 9:44:10 AM GMT+1
+The session has been destroyed!  by admin, on Monday, October 9, 2023 at 9:44:20 AM GMT+1
+Login succesful  by admin global kids academy, on Monday, October 9, 2023 at 9:44:23 AM GMT+1
+The session has been destroyed!  by admin, on Monday, October 9, 2023 at 9:44:33 AM GMT+1
+The session has been destroyed!  by user, on Monday, October 9, 2023 at 9:44:33 AM GMT+1
+The session has been destroyed!  by user, on Monday, October 9, 2023 at 9:44:50 AM GMT+1
+The session has been destroyed!  by user, on Monday, October 9, 2023 at 9:44:50 AM GMT+1
+The session has been destroyed!  by user, on Monday, October 9, 2023 at 9:44:50 AM GMT+1
+The session has been destroyed!  by user, on Monday, October 9, 2023 at 9:45:14 AM GMT+1
+The session has been destroyed!  by user, on Monday, October 9, 2023 at 9:45:14 AM GMT+1
+The session has been destroyed!  by user, on Monday, October 9, 2023 at 9:45:14 AM GMT+1
+Login succesful  by admin global kids academy, on Monday, October 9, 2023 at 9:45:43 AM GMT+1
+The session has been destroyed!  by admin, on Monday, October 9, 2023 at 9:48:05 AM GMT+1
+Login succesful  by admin global kids academy, on Monday, October 9, 2023 at 9:48:48 AM GMT+1
+The session has been destroyed!  by admin, on Monday, October 9, 2023 at 9:59:26 AM GMT+1

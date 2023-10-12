@@ -1,0 +1,476 @@
+:root {
+  --custom-login-bg: #1f3f5b;
+  --custom-login-text-lightdark: #5a5a5a;
+}
+
+.__custom-login {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.__custom-login .login-container {
+  width: 100%;
+  background-color: #f3eef2;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container {
+    background-color: white;
+    padding: 0 0;
+    margin: 0;
+    height: 100%;
+  }
+}
+.__custom-login .login-container h2.heading {
+  font-family: "Poppins-SemiBold";
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container h2.heading {
+    display: none;
+  }
+}
+.__custom-login .login-container .grid-2 {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin-top: 1rem;
+  position: relative;
+}
+@media only screen and (max-width: 1100px) {
+  .__custom-login .login-container .grid-2 {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .__custom-login .login-container .grid-2 {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 {
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    padding: 5rem 0 2rem;
+    background-color: #fff;
+    z-index: 1;
+  }
+}
+.__custom-login .login-container .grid-2 .form-area {
+  flex: 1;
+  width: 50%;
+  padding: 2.5rem;
+  background-color: var(--custom-login-bg, #1f3f5b);
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .form-area {
+    flex: 0;
+    width: 90%;
+    background-color: transparent;
+    color: black;
+  }
+}
+.__custom-login .login-container .grid-2 .form-area .headling-cont {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  font-family: "Poppins-Medium";
+}
+.__custom-login .login-container .grid-2 .form-area .headling-cont h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .form-area .headling-cont h2 {
+    color: var(--custom-login-bg, #1f3f5b);
+  }
+}
+.__custom-login .login-container .grid-2 .form-area .headling-cont span {
+  position: relative;
+  cursor: pointer;
+}
+.__custom-login .login-container .grid-2 .form-area .headling-cont span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.8);
+  border-radius: 50%;
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .form-area .headling-cont span::before {
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .form-area .headling-cont span {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-20px);
+  }
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .form-area .headling-cont span svg {
+    fill: var(--custom-login-bg);
+  }
+}
+.__custom-login .login-container .grid-2 .form-area form {
+  font-family: "Poppins-Regular";
+}
+.__custom-login .login-container .grid-2 .form-area form .form-input-icons {
+  width: 100%;
+  position: relative;
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0 0.3rem;
+}
+.__custom-login .login-container .grid-2 .form-area form .form-input-icons:nth-child(2) {
+  margin-bottom: 2rem;
+}
+.__custom-login .login-container .grid-2 .form-area form .form-input-icons::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #8b8b8b;
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .form-area form .form-input-icons::before {
+    background-color: var(--custom-login-text-lightdark, gray);
+  }
+}
+.__custom-login .login-container .grid-2 .form-area form .form-input-icons::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: 0.5s all ease;
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .form-area form .form-input-icons::after {
+    background-color: var(--custom-login-bg, #1f3f5b);
+  }
+}
+.__custom-login .login-container .grid-2 .form-area form .form-input-icons:focus-within .icon-up {
+  transition: 0.3s all ease;
+  transform: translateY(-30px);
+  width: 18px;
+  fill: #fff;
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .form-area form .form-input-icons:focus-within .icon-up {
+    fill: var(--custom-login-bg, #1f3f5b);
+  }
+}
+.__custom-login .login-container .grid-2 .form-area form .form-input-icons:focus-within::after {
+  width: 100%;
+}
+.__custom-login .login-container .grid-2 .form-area form .form-input-icons:focus-within input {
+  padding: 0 0 0.5rem 0.2rem;
+}
+.__custom-login .login-container .grid-2 .form-area form .form-input-icons:focus-within input::-moz-placeholder {
+  color: transparent;
+  text-indent: 0;
+}
+.__custom-login .login-container .grid-2 .form-area form .form-input-icons:focus-within input::placeholder {
+  color: transparent;
+  text-indent: 0;
+}
+.__custom-login .login-container .grid-2 .form-area form .form-input-icons:has(input:not(:-moz-placeholder-shown))::after {
+  width: 100%;
+}
+.__custom-login .login-container .grid-2 .form-area form .form-input-icons:has(input:not(:placeholder-shown))::after {
+  width: 100%;
+}
+.__custom-login .login-container .grid-2 .form-area form .form-input-icons input:not(:-moz-placeholder-shown) ~ span .icon-up {
+  -moz-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  transform: translateY(-30px);
+  width: 18px;
+  fill: white;
+}
+.__custom-login .login-container .grid-2 .form-area form .form-input-icons input:not(:placeholder-shown) ~ span .icon-up {
+  transition: 0.3s all ease;
+  transform: translateY(-30px);
+  width: 18px;
+  fill: white;
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .form-area form .form-input-icons input:not(:-moz-placeholder-shown) ~ span .icon-up {
+    fill: var(--custom-login-bg, #1f3f5b);
+  }
+  .__custom-login .login-container .grid-2 .form-area form .form-input-icons input:not(:placeholder-shown) ~ span .icon-up {
+    fill: var(--custom-login-bg, #1f3f5b);
+  }
+}
+.__custom-login .login-container .grid-2 .form-area form .form-input-icons input:not(:-moz-placeholder-shown) {
+  text-indent: 0px;
+  padding: 0 0 0.5rem 0.2rem;
+}
+.__custom-login .login-container .grid-2 .form-area form .form-input-icons input:not(:placeholder-shown) {
+  text-indent: 0px;
+  padding: 0 0 0.5rem 0.2rem;
+}
+.__custom-login .login-container .grid-2 .form-area form .form-input-icons svg {
+  transition: 0.3s all ease;
+  position: absolute;
+  left: 0;
+  top: 0;
+  top: 25%;
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .form-area form .form-input-icons svg {
+    fill: var(--custom-login-text-lightdark, gray);
+    top: 30%;
+  }
+}
+.__custom-login .login-container .grid-2 .form-area form .form-input-icons .show-pass {
+  left: inherit !important;
+  right: 0 !important;
+  cursor: pointer;
+  top: 40% !important;
+}
+.__custom-login .login-container .grid-2 .form-area form .form-input-icons input {
+  width: 100%;
+  border: none;
+  padding: 0 0 0.5rem 0.2rem;
+  outline: none;
+  font-size: 16px;
+  background-color: transparent;
+  color: white;
+  font-size: 15px;
+}
+.__custom-login .login-container .grid-2 .form-area form .form-input-icons input::-moz-placeholder {
+  text-indent: 30px;
+  color: #fefefe;
+}
+.__custom-login .login-container .grid-2 .form-area form .form-input-icons input::placeholder {
+  text-indent: 30px;
+  color: #fefefe;
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .form-area form .form-input-icons input::-moz-placeholder {
+    color: black;
+  }
+  .__custom-login .login-container .grid-2 .form-area form .form-input-icons input::placeholder {
+    color: black;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .form-area form .form-input-icons input {
+    color: black;
+  }
+}
+.__custom-login .login-container .grid-2 .form-area form .checkbox-form {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 1.2rem 0 0.5rem;
+  justify-content: space-between;
+  font-size: 12px;
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .form-area form .checkbox-form {
+    margin-bottom: 2rem;
+  }
+}
+.__custom-login .login-container .grid-2 .form-area form .checkbox-form label {
+  font-family: "Poppins-Regular";
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+}
+.__custom-login .login-container .grid-2 .form-area form .checkbox-form label * {
+  margin-right: 0.2rem;
+}
+.__custom-login .login-container .grid-2 .form-area form .checkbox-form a {
+  text-decoration: none;
+  color: white;
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .form-area form .checkbox-form a {
+    color: black;
+  }
+}
+.__custom-login .login-container .grid-2 .form-area form button[type=submit] {
+  width: 100%;
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .form-area form button[type=submit] {
+    background-color: var(--custom-login-bg, #1f3f5b);
+    border-radius: 0;
+    padding: 0.7rem 1.5rem;
+    color: white;
+  }
+}
+.__custom-login .login-container .grid-2 .discription-image {
+  flex: 1;
+  min-width: 50%;
+  max-width: 50%;
+  width: 50%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Poppins-Regular";
+  background: white;
+  background-size: cover;
+  background-position: top center;
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .discription-image {
+    flex: 0;
+    width: 90%;
+    min-width: 90%;
+    max-width: 90%;
+    background: none;
+    background-color: transparent;
+  }
+}
+.__custom-login .login-container .grid-2 .discription-image h2 {
+  font-weight: bold;
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .discription-image h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: var(--custom-login-text-lightdark, #232323);
+  }
+}
+.__custom-login .login-container .grid-2 .discription-image small {
+  font-size: 1rem;
+  display: block;
+  text-align: center;
+  width: 70%;
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .discription-image small {
+    margin: auto;
+    font-size: 1rem;
+    padding: 1rem 0;
+    color: #4a4a4a;
+  }
+}
+.__custom-login .login-container .grid-2 .discription-image .school-details {
+  margin: 2.5em 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.5rem 2rem;
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .discription-image .school-details {
+    margin: 0;
+  }
+}
+.__custom-login .login-container .grid-2 .discription-image .school-details span {
+  position: relative;
+}
+.__custom-login .login-container .grid-2 .discription-image .school-details span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: scale(1.5);
+  overflow: hidden;
+}
+.__custom-login .login-container .grid-2 .discription-image .school-details span:has(svg)::before {
+  border: 2px solid #504c4c;
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .discription-image .school-details span:has(svg)::before {
+    display: none;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .discription-image .school-details span svg {
+    fill: var(--custom-login-bg);
+    margin-bottom: 1rem;
+  }
+}
+.__custom-login .login-container .grid-2 .discription-image .school-details span img {
+  width: 100%;
+  max-width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: scale(1.45);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .discription-image .school-details span img {
+    display: none;
+  }
+}
+.__custom-login .login-container .grid-2 .discription-image .school-details .school-name {
+  font-family: "Poppins-Regular";
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+@media only screen and (max-width: 700px) {
+  .__custom-login .login-container .grid-2 .discription-image .school-details .school-name {
+    color: var(--custom-login-text-lightdark);
+    margin: 0;
+  }
+}
+
+.loading-state {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.loading-state.error {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  color: #5a5a5a;
+}
+.loading-state.error .error-inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #5a5a5a;
+  flex-direction: column;
+}/*# sourceMappingURL=customlogin.css.map */

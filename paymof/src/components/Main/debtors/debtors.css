@@ -1,0 +1,220 @@
+.__debtors,
+.__statements {
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (min-width: 800px) {
+  .__debtors,
+  .__statements {
+    height: auto;
+    margin: 0rem 0 2rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .__debtors,
+  .__statements {
+    padding: 0;
+  }
+}
+.__debtors .search-container,
+.__statements .search-container {
+  display: flex;
+  width: 100%;
+  padding: 1rem 0;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1rem 0.3rem;
+}
+@media only screen and (min-width: 800px) {
+  .__debtors .search-container,
+  .__statements .search-container {
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    padding-left: 0.5rem;
+    padding-top: 1rem;
+  }
+}
+@media only screen and (min-width: 970px) {
+  .__debtors .search-container,
+  .__statements .search-container {
+    padding-right: 1.5rem;
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 860px) {
+  .__debtors .search-container,
+  .__statements .search-container {
+    padding-left: 0.3rem;
+    padding-right: 0.5rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .__debtors .search-container,
+  .__statements .search-container {
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+}
+.__debtors .search-container .input-filter-cont,
+.__statements .search-container .input-filter-cont {
+  flex: 1;
+  width: 100%;
+}
+.__debtors .search-container .input-filter-cont span,
+.__statements .search-container .input-filter-cont span {
+  width: 100%;
+  min-width: 300px;
+}
+@media only screen and (min-width: 970px) {
+  .__debtors .search-container .input-filter-cont span,
+  .__statements .search-container .input-filter-cont span {
+    min-width: 300px;
+  }
+}
+.__debtors .search-container .input-filter-cont input,
+.__statements .search-container .input-filter-cont input {
+  width: 100%;
+}
+.__debtors .search-container .p-dropdown,
+.__statements .search-container .p-dropdown {
+  flex: 1;
+  width: 100%;
+  min-width: 150px;
+}
+@media only screen and (min-width: 970px) {
+  .__debtors .search-container .p-dropdown,
+  .__statements .search-container .p-dropdown {
+    max-width: 100%;
+  }
+}
+.__debtors .search-container .filter,
+.__statements .search-container .filter {
+  background-color: #c5d7e5;
+  border: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.__debtors .search-container .filter:focus,
+.__statements .search-container .filter:focus {
+  background-color: transparent;
+  border: 1px solid gray;
+}
+.__debtors .search-container .btn-cont,
+.__statements .search-container .btn-cont {
+  display: flex;
+  flex-wrap: wrap;
+}
+.__debtors .search-container .btn-cont button,
+.__statements .search-container .btn-cont button {
+  transform: scale(0.87);
+}
+@media only screen and (min-width: 800px) {
+  .__debtors .debtors-table,
+  .__statements .debtors-table {
+    width: 100%;
+    padding-left: 0rem;
+    padding-top: 0.5rem;
+  }
+}
+@media screen and (max-width: 860px) {
+  .__debtors .debtors-table,
+  .__statements .debtors-table {
+    padding-left: 0.3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .__debtors .debtors-table,
+  .__statements .debtors-table {
+    padding-left: 0;
+    max-width: 100%;
+    overflow: auto;
+  }
+}
+.__debtors .debtors-table table,
+.__statements .debtors-table table {
+  border: 1px solid gainsboro;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.7rem 0;
+}
+@media only screen and (min-width: 800px) {
+  .__debtors .debtors-table table,
+  .__statements .debtors-table table {
+    padding: 1rem;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .__debtors .debtors-table table,
+  .__statements .debtors-table table {
+    width: 100%;
+  }
+}
+.__debtors .debtors-table table thead,
+.__statements .debtors-table table thead {
+  background-color: black;
+  color: white;
+}
+.__debtors .debtors-table table tr td,
+.__debtors .debtors-table table tr th,
+.__statements .debtors-table table tr td,
+.__statements .debtors-table table tr th {
+  text-transform: uppercase;
+  padding: 0.2rem 0.12rem;
+  vertical-align: middle;
+  font-size: small;
+}
+@media only screen and (min-width: 800px) {
+  .__debtors .debtors-table table tr td,
+  .__debtors .debtors-table table tr th,
+  .__statements .debtors-table table tr td,
+  .__statements .debtors-table table tr th {
+    padding: 0.4rem;
+    font-size: 0.9rem;
+  }
+}
+.__debtors .debtors-table table tr th,
+.__statements .debtors-table table tr th {
+  border-right: none;
+}
+.__debtors .debtors-table table tr th:nth-child(2),
+.__statements .debtors-table table tr th:nth-child(2) {
+  text-align: center;
+}
+@media only screen and (min-width: 800px) {
+  .__debtors .debtors-table table tr th:nth-child(2),
+  .__statements .debtors-table table tr th:nth-child(2) {
+    text-align: left;
+  }
+}
+.__debtors .debtors-table table tr th:nth-child(4),
+.__statements .debtors-table table tr th:nth-child(4) {
+  text-align: center;
+}
+@media only screen and (min-width: 800px) {
+  .__debtors .debtors-table table tr th:nth-child(4),
+  .__statements .debtors-table table tr th:nth-child(4) {
+    text-align: left;
+  }
+}
+.__debtors .debtors-table::-webkit-scrollbar,
+.__statements .debtors-table::-webkit-scrollbar {
+  width: 0.1rem !important;
+  height: 0.4rem;
+}
+.__debtors .debtors-table::-webkit-scrollbar-track,
+.__statements .debtors-table::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.__debtors .debtors-table::-webkit-scrollbar-thumb:hover,
+.__statements .debtors-table::-webkit-scrollbar-thumb:hover {
+  background-color: gray;
+  outline: none;
+}
+.__debtors table:has(.loading),
+.__statements table:has(.loading) {
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}/*# sourceMappingURL=debtors.css.map */

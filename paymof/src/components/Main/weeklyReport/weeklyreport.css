@@ -1,0 +1,106 @@
+.__weekly {
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (min-width: 800px) {
+  .__weekly {
+    height: auto;
+    margin: 0rem 0 2rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .__weekly {
+    padding: 0;
+  }
+}
+.__weekly .search-container {
+  display: flex;
+  width: 100%;
+  padding: 1rem 0;
+  gap: 0.5rem;
+  align-items: center;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  padding: 1rem 0.5rem;
+  margin: 1rem 0.3rem;
+}
+@media only screen and (min-width: 800px) {
+  .__weekly .search-container {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (min-width: 970px) {
+  .__weekly .search-container {
+    padding-right: 1.5rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+@media screen and (max-width: 660px) {
+  .__weekly .search-container {
+    padding-left: 0.3rem;
+    padding-right: 0.5rem;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .__weekly .search-container {
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+}
+.__weekly .search-container input {
+  flex: 1;
+}
+.__weekly .search-container label {
+  color: #5a5a5a;
+}
+.__weekly .search-container .p-multiselect {
+  flex: 1;
+  min-width: 150px;
+  width: 50%;
+}
+@media only screen and (min-width: 800px) {
+  .__weekly .search-container .p-multiselect {
+    min-width: 150px;
+  }
+}
+@media only screen and (min-width: 970px) {
+  .__weekly .search-container .p-multiselect {
+    min-width: 200px;
+  }
+}
+.__weekly table {
+  width: 100%;
+  margin-top: 1rem;
+}
+.__weekly table tr {
+  width: 100%;
+  text-transform: uppercase;
+}
+.__weekly table tr.colspan {
+  text-align: center;
+  border: none;
+  height: 30px;
+}
+.__weekly table tr.colspan th {
+  padding: 0;
+  border: none;
+  color: #4a4a4a;
+}
+.__weekly table tr.colspan th h5 {
+  margin: 0;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+.__weekly table th {
+  color: #4a4a4a;
+}
+.__weekly table td {
+  color: #4a4a4a;
+}
+.__weekly table:has(.loading) {
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}/*# sourceMappingURL=weeklyreport.css.map */
