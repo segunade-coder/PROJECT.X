@@ -38,9 +38,9 @@ let success = (msg, id = "") => {
 let loading = (msg = "Loading...", id = "") => {
   toast.loading(msg, { id: id });
 };
-// let url = "http://localhost:5000";
+let url = "http://localhost:5000";
 // let url = "http://192.168.137.8:5000";
-let url = "";
+// let url = "";
 let notifications = {
   warning,
   success,

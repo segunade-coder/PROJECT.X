@@ -217,4 +217,192 @@
 .__statements table:has(.loading) {
   min-height: -moz-fit-content;
   min-height: fit-content;
+}
+
+.print-modal {
+  padding: 1rem 0;
+}
+@media print {
+  .print-modal {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 !important;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .print-modal {
+    padding: 1.5rem 0;
+  }
+}
+.print-modal .modal-body {
+  overflow: hidden;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10rem;
+}
+@media print {
+  .print-modal .modal-body {
+    font-family: "Open-Sans", sans-serif;
+    margin: 0 !important;
+    padding: 3rem 0.7rem;
+  }
+  .print-modal .modal-body * {
+    color: black !important;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .print-modal .modal-body {
+    max-width: 400px;
+    width: 400px;
+    margin-top: 20rem;
+  }
+}
+@media only screen and (min-width: 970px) {
+  .print-modal .modal-body {
+    max-width: 400px;
+    width: 400px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .print-modal .modal-body {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .print-modal .modal-body {
+    width: 95%;
+  }
+}
+.print-modal .modal-body .header {
+  display: none;
+}
+.print-modal .modal-body .content {
+  font-size: 14px;
+  padding: 0.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.print-modal .modal-body .content h4 {
+  text-align: center;
+  margin: 0.5rem;
+  font-size: 18px;
+}
+.print-modal .modal-body .content .img-cont {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.print-modal .modal-body .content .img-cont img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  width: 300px;
+  height: 200px;
+  transform: scale(0.95);
+}
+.print-modal .modal-body .content .student-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+@media print {
+  .print-modal .modal-body .content .student-info table thead tr {
+    border-color: #cac8c8;
+  }
+}
+@media print {
+  .print-modal .modal-body .content .student-info table thead tr td,
+  .print-modal .modal-body .content .student-info table thead tr th {
+    color: black !important;
+  }
+}
+.print-modal .modal-body .content .fee-info {
+  display: flex;
+  flex-direction: column;
+}
+.print-modal .modal-body .content .fee-info table {
+  font-size: 13px;
+}
+@media print {
+  .print-modal .modal-body .content .fee-info table thead tr,
+  .print-modal .modal-body .content .fee-info table tbody tr {
+    border-color: #cac8c8;
+  }
+}
+.print-modal .modal-body .content .fee-info table thead tr td,
+.print-modal .modal-body .content .fee-info table thead tr th,
+.print-modal .modal-body .content .fee-info table tbody tr td,
+.print-modal .modal-body .content .fee-info table tbody tr th {
+  word-wrap: break-word;
+}
+@media print {
+  .print-modal .modal-body .content .fee-info table thead tr td,
+  .print-modal .modal-body .content .fee-info table thead tr th,
+  .print-modal .modal-body .content .fee-info table tbody tr td,
+  .print-modal .modal-body .content .fee-info table tbody tr th {
+    color: black !important;
+  }
+}
+.print-modal .modal-body .content .fee-info table thead tr td:nth-child(1),
+.print-modal .modal-body .content .fee-info table thead tr th:nth-child(1),
+.print-modal .modal-body .content .fee-info table tbody tr td:nth-child(1),
+.print-modal .modal-body .content .fee-info table tbody tr th:nth-child(1) {
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 90px;
+}
+.print-modal .modal-body .content .fee-info h4 {
+  text-align: center;
+  margin: 0.4rem;
+}
+.print-modal .modal-body .content .others-cont {
+  margin: 1rem 0 0;
+}
+.print-modal .modal-body .content .others {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.print-modal .modal-body .content .others div {
+  font-weight: bold;
+  width: 100px;
+}
+@media print {
+  .print-modal .modal-body .content {
+    margin-bottom: 5rem;
+  }
+}
+.print-modal footer {
+  padding: 0;
+}
+@media print {
+  .print-modal footer {
+    display: none;
+    margin: 3rem;
+  }
+}
+
+@media print {
+  .balance-table,
+  .view-debtor-cont,
+  .search-container {
+    display: none !important;
+  }
+  .print-modal {
+    display: flex !important;
+    margin: 0 !important;
+    background-color: white;
+  }
+}
+@page {
+  margin-left: 0;
+  margin-right: 0;
 }/*# sourceMappingURL=debtors.css.map */

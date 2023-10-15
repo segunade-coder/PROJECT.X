@@ -111,7 +111,7 @@ const Login = () => {
             if (data.error) {
               toast.error(data.message, { id: "thid" });
             } else {
-              toast.success("Success!", { id: "thid" });
+              toast.dismiss("thid");
               if (
                 go_to &&
                 go_to.includes(`${school.toLowerCase().replace(/ /g, "_")}`)

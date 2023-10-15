@@ -725,6 +725,30 @@ const findDebtors = (req, res) => {
             message: "Something went wrong. Try refreshing",
           });
         });
+    } else if (sort === "left") {
+      if (filteredClass === "" || filteredClass === null) {
+        sql = `SELECT name, class, phone_number, discounts FROM ${req?.session?.databaseName}_students WHERE (status ='left') ORDER BY class`;
+      } else {
+        sql = `SELECT * FROM ${
+          req?.session?.databaseName
+        }_students WHERE (class = "${filteredClass
+          ?.toLowerCase()
+          ?.trim()}" AND status = 'left') ORDER BY class`;
+      }
+      db.query(sql)
+        .then((data) => {
+          return res.json({
+            status: true,
+            message: data,
+          });
+        })
+        .catch((err) => {
+          console.log(err);
+          res.json({
+            status: false,
+            message: "Something went wrong. Try refreshing",
+          });
+        });
     } else {
       let sql;
       if (filteredClass === "" || filteredClass === null) {

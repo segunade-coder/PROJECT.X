@@ -1,5 +1,9 @@
 import React from "react";
 
+const Cpanel = React.lazy(() =>
+  import("./components/centralControl/Cpanel.jsx")
+);
+
 const Index = React.lazy(() => import("./components/index/Index.jsx"));
 const ErrorPage = React.lazy(() =>
   import("./components/small_comps/404/ErrorPage.jsx")
@@ -56,6 +60,7 @@ const ExpandDebt = React.lazy(() =>
 );
 
 export {
+  Cpanel,
   Index,
   Login,
   CustomLogin,

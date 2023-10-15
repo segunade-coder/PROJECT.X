@@ -162,6 +162,8 @@ const createTables = (school) => {
   db.createTable(
     `${school}_payment_record`,
     { columnName: "name", dataType: "varchar" },
+    { columnName: "class", dataType: "varchar" },
+    { columnName: "adm_no", datatype: "varchar" },
     { columnName: "payment_id", dataType: "varchar" },
     { columnName: "amount_paid", dataType: "varchar" },
     { columnName: "PTA", dataType: "int" },
@@ -175,7 +177,6 @@ const createTables = (school) => {
     { columnName: "DOP", dataType: "varchar" },
     { columnName: "balance_date", dataType: "varchar" },
     { columnName: "remark", dataType: "varchar" },
-    { columnName: "class", dataType: "varchar" },
     { columnName: "keyid", dataType: "varchar" },
     { columnName: "payment_for", dataType: "varchar" },
     { columnName: "payment_method", dataType: "varchar" },

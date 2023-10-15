@@ -504,6 +504,7 @@ const Payment = () => {
     setStudentClass({ name: details?.class?.toUpperCase() });
     autoTotal(details?.class?.toUpperCase());
     setspecialDiscount(details?.discounts?.toUpperCase());
+    setAdmNo(details?.adm_no);
     setAutoName([]);
     // autoTotal(details.name?.toUpperCase());
     displayOnce.current = 0;
@@ -654,6 +655,7 @@ const Payment = () => {
                 name,
                 paymentId,
                 studentClass: studentClass.name,
+                admNo,
                 DOP: convertDate(new Date(DOP)),
                 DOB: DOB !== "" ? convertDate(new Date(DOB)) : "",
                 DOG: DOB !== "" ? convertDate(new Date(DOG)) : "",
@@ -727,6 +729,7 @@ const Payment = () => {
     );
     setSaveTimes(0);
     setDOP("");
+    setAdmNo("");
     setPaymentMethod("");
     setPaymentFor("");
     setTotalFee(0);
@@ -929,6 +932,7 @@ const Payment = () => {
                   name,
                   paymentId,
                   studentClass: studentClass.name,
+                  admNo,
                   DOP: convertDate(new Date(DOP)),
                   DOB: DOB !== "" ? convertDate(new Date(DOB)) : "",
                   DOG: DOB !== "" ? convertDate(new Date(DOG)) : "",

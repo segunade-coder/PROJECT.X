@@ -112,6 +112,7 @@ const savePayment = async (req, res) => {
       session,
       loggedUser,
       defaultWallet,
+      admNo,
     } = datas;
 
     // check if variables are empty
@@ -175,6 +176,7 @@ const savePayment = async (req, res) => {
               payment_id: paymentId,
               amount_paid: feePaid,
               expected_payment: Number(totalFee),
+              adm_no: admNo,
               balance,
               term: term?.toLowerCase(),
               session: session,

@@ -38,29 +38,12 @@ input::-webkit-inner-spin-button {
 }
 a {
   user-select: none;
-  // outline: none !important;
 }
 input {
   background-color: white;
   outline: none;
   color: #5a5a5a;
 }
-// input[type="date"]{
-//   position: relative;
-//   border: none;
-// }
-// input[type="date"]::-webkit-calendar-picker-indicator {
-//   background-color: white !important;
-//   bottom: 0;
-//   top: 0;
-//   color: transparent !important;
-//   cursor: pointer;
-//   height: auto;
-//   left: 0;
-//   position: absolute;
-//   right: 0;
-//   width: auto;
-// }
 
 select {
   background-color: white;

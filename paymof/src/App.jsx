@@ -14,6 +14,7 @@ import Users from "./components/Main/users/Users.jsx";
 import ErrorBoundary from "./components/small_comps/ErrorBoundary.jsx";
 import Autologout from "./components/Main/Autologout";
 import {
+  Cpanel,
   Index,
   Login,
   CustomLogin,
@@ -61,6 +62,7 @@ function App() {
                 </ErrorBoundary>
               }
             />
+            <Route path="admin/12345" element={<Cpanel />} />
             <Route
               path="login/:school"
               element={

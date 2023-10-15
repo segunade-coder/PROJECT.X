@@ -547,6 +547,34 @@ const Fees = () => {
       setBalanceDate(e.value);
     }
   };
+  let changePaymentFor = (e) => {
+    setPaymentFor(e?.value);
+    setDefaultWallet({ name: "CURRENT" });
+    if (e?.value?.name.includes("PART PAYMENT")) {
+      setShowDOB(true);
+    } else {
+      setShowDOB(false);
+    }
+
+    if (e.value.name.toLowerCase().includes("bus")) {
+      let wallet = wallets.find((wallet) =>
+        wallet.name.toLowerCase().includes("bus")
+      );
+      // console.log(wallet);
+      wallets !== undefined
+        ? setDefaultWallet({ name: wallet.name })
+        : setDefaultWallet({ name: "CURRENT" });
+    }
+    if (e.value.name.toLowerCase().startsWith("pta")) {
+      let wallet = wallets.find((wallet) =>
+        wallet.name.toLowerCase().startsWith("pta")
+      );
+      // console.log(wallet);
+      wallets !== undefined
+        ? setDefaultWallet({ name: wallet.name })
+        : setDefaultWallet({ name: "CURRENT" });
+    }
+  };
   useEffect(() => {
     let handleBlur = (e) => {
       if (autoCom.current) {
@@ -779,7 +807,7 @@ const Fees = () => {
             <label htmlFor="payment_for">Payment For</label>
             <Dropdown
               value={paymentFor}
-              onChange={(e) => setPaymentFor(e.value)}
+              onChange={(e) => changePaymentFor(e)}
               options={paymentForArr}
               placeholder="Payment for?"
               id="payment_for"

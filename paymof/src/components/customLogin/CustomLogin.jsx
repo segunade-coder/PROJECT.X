@@ -121,7 +121,7 @@ const CustomLogin = () => {
           if (data.error) {
             toast.error(data.message, { id: "thid" });
           } else {
-            toast.success("Success!", { id: "thid" });
+            toast.dismiss("thid");
             if (
               go_to &&
               go_to.includes(`${schoolName.toLowerCase().replace(/ /g, "_")}`)

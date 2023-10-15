@@ -36,7 +36,8 @@ const Records = () => {
   const [viewPaymentId, setViewPaymentId] = useState("");
   const [viewTotal, setViewTotal] = useState("");
   const [viewBalance, setViewBalance] = useState("");
-  const [DOG, setDOG] = useState([]);
+  // eslint-disable-next-line no-unused-vars
+  const [_, setDOG] = useState([]);
   const [viewRemark, setViewRemark] = useState([]);
   const [amountsPaid, setamountsPaid] = useState([]);
   const [totalPaid, setTotalPaid] = useState(0);
@@ -437,7 +438,7 @@ const Records = () => {
             document.body.style.overflow = "hidden";
             window.scrollTo(0, parseInt(window.scrollY || "0") * -1);
           } else {
-            notifications.warning(data.message, uniqueId);
+            notifications.warning(data.message, uniqid);
           }
         })
         .catch((err) => {
