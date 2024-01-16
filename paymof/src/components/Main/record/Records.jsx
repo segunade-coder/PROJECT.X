@@ -182,6 +182,12 @@ const Records = () => {
           {item.name?.toUpperCase()}
         </span>
         <span className="class">{item.class?.toUpperCase()}</span>
+        <small
+          className="show-xtra"
+          style={{ fontSize: "0.60rem", marginLeft: ".5rem" }}
+        >
+          {item.term?.toUpperCase()} {item.session?.toUpperCase()}
+        </small>
       </div>
     );
   };
@@ -589,9 +595,8 @@ const Records = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          toast.dismiss(uniqid);
           if (data.status) {
-            toast.success(data.message);
+            toast.success(data.message, { id: uniqid });
             document
               .getElementsByClassName("edit-modal")[0]
               .classList.remove("show-modal");
@@ -599,7 +604,7 @@ const Records = () => {
             document.body.style.top = "";
             fetchRecord();
           } else {
-            notifications.warning(data.message, uniqueId);
+            notifications.warning(data.message, uniqid);
           }
         })
         .catch((err) => {
@@ -926,6 +931,14 @@ const Records = () => {
                       >
                         <RiEdit2Line fill="orangered" /> Edit
                       </button>
+                      {Number(record?.balance) > 0 && (
+                        <a
+                          href={`fees?id=${record?.keyid}`}
+                          className="btn btn-warning btn-sm text-white mt-2"
+                        >
+                          Balance fee
+                        </a>
+                      )}
                     </span>
                   </p>
                 </details>

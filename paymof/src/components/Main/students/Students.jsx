@@ -421,7 +421,7 @@ const Students = () => {
   let findId = (e) => {
     e.preventDefault();
     setAutoName([]);
-    if (Number(searchId) !== 0) setFindStudentStatus(true);
+    if (Number(searchId) !== 0 && searchId !== null) setFindStudentStatus(true);
     else setFindStudentStatus(false);
     let status = findStudentStatus;
     let datas = {
@@ -429,7 +429,7 @@ const Students = () => {
       name: name.trim().toLowerCase(),
       status,
     };
-    if (searchId === 0 && name === "") {
+    if (searchId === 0 && name === "" && name === null) {
       notifications.warning("Empty search", uniqueId);
     } else {
       let findIDLoading = toast.loading("Fetching Data...");
@@ -569,8 +569,8 @@ const Students = () => {
     setSelectedAction([]);
     setSelectedItem([]);
     document
-    .querySelectorAll(".filter")
-    .forEach((elem) => elem.classList.remove("filter"));
+      .querySelectorAll(".filter")
+      .forEach((elem) => elem.classList.remove("filter"));
   };
   let handlePageChange = (newPage) => {
     setcurrentPage(newPage);
@@ -1238,6 +1238,7 @@ const Students = () => {
             itemTemplate={autoCompleteTemplate}
             onSelect={(e) => handleAutoClick(e)}
             placeholder="Search name here"
+            autoFocus={true}
           />
         </div>
         <div className="class-cont">

@@ -148,7 +148,7 @@ const findSearchRecord = (req, res) => {
         `%${name.toLowerCase()}%`
       )} OR payment_id = ${mysql.escape(
         name
-      )}) GROUP BY keyid LIMIT ${limit} OFFSET ${offset}`
+      )}) GROUP BY keyid ORDER BY created_at LIMIT ${limit} OFFSET ${offset}`
     )
       .then((data) => {
         if (data) {
@@ -393,7 +393,7 @@ const findDebtors = (req, res) => {
 
                 if (names2.length !== 0) {
                   conn.query(
-                    `SELECT name, class, discounts, phone_number FROM ${req?.session?.databaseName}_students WHERE class = ? AND name NOT IN (?) AND status = ? AND discounts <> 'scholarship' ORDER BY name`,
+                    `SELECT name, class, discounts, phone_number FROM ${req?.session?.databaseName}_students WHERE class = ? AND name NOT IN (?) AND status = ? AND discounts <> 'scholarship' ORDER BY discounts`,
                     [filteredClass?.toLowerCase()?.trim(), names2, "active"],
                     (err, restStudent) => {
                       if (err) {
@@ -441,9 +441,8 @@ const findDebtors = (req, res) => {
                   let names3 = data3?.map((ind) => ind?.name);
                   // console.log(names3);
                   if (names3.length !== 0) {
-                    console.log("There are stuent that have paid");
                     conn.query(
-                      `SELECT name, class, discounts, phone_number FROM ${req?.session?.databaseName}_students WHERE name NOT IN (?) AND class = ? AND status = 'active'  AND discounts <> 'scholarship' ORDER BY name`,
+                      `SELECT name, class, discounts, phone_number FROM ${req?.session?.databaseName}_students WHERE name NOT IN (?) AND class = ? AND status = 'active'  AND discounts <> 'scholarship' ORDER BY discounts`,
                       [names3, filteredClass?.toLowerCase()?.trim()],
                       (err, restStud) => {
                         if (err) {
@@ -487,7 +486,7 @@ const findDebtors = (req, res) => {
                     );
                   } else {
                     conn.query(
-                      `SELECT name, class, discounts, phone_number FROM ${req?.session?.databaseName}_students WHERE class = ? AND status = ?  AND discounts <> 'scholarship' ORDER BY name`,
+                      `SELECT name, class, discounts, phone_number FROM ${req?.session?.databaseName}_students WHERE class = ? AND status = ?  AND discounts <> 'scholarship' ORDER BY discounts`,
                       [filteredClass?.toLowerCase()?.trim(), "active"],
                       (err, restStud) => {
                         if (err) {
@@ -627,7 +626,7 @@ const findDebtors = (req, res) => {
               let names = data?.map((ind) => ind?.keyid);
               let names2 = data?.map((ind) => ind?.name);
               conn.query(
-                `SELECT name, class, discounts, phone_number FROM ${req?.session?.databaseName}_students WHERE name NOT IN (?) AND class = ? AND status = ?`,
+                `SELECT name, class, discounts, phone_number FROM ${req?.session?.databaseName}_students WHERE name NOT IN (?) AND class = ? AND status = ? ORDER BY discounts`,
                 [names2, filteredClass?.toLowerCase()?.trim(), "active"],
                 (err, restStud) => {
                   if (err) {
@@ -664,7 +663,7 @@ const findDebtors = (req, res) => {
               );
             } else {
               conn.query(
-                `SELECT name, class, discounts, phone_number FROM ${req?.session?.databaseName}_students WHERE class = ? AND status = ?`,
+                `SELECT name, class, discounts, phone_number FROM ${req?.session?.databaseName}_students WHERE class = ? AND status = ? ORDER BY discounts`,
                 [filteredClass?.toLowerCase()?.trim(), "active"],
                 (err, restStud) => {
                   if (err) {
@@ -822,11 +821,11 @@ const prepareWeeklyReport = (req, res) => {
     let conn = db.returnConnection();
     let sql;
     if (sort.toLowerCase() === "dop") {
-      sql = `SELECT class, SUM(amount_paid) AS overTotal, SUM(pta) AS totalPTA, SUM(lesson) AS totalLesson, SUM(tuition) AS totalTuition, COUNT(*) AS totalPayment, SUM(balance) as balance FROM ${req?.session?.databaseName}_payment_record WHERE WEEK(DOP) = WEEK(?) AND term = ? AND session = ? AND payment_for NOT IN (?) AND class IN (?) GROUP BY class`;
+      sql = `SELECT class, SUM(amount_paid) AS overTotal, SUM(pta) AS totalPTA, SUM(lesson) AS totalLesson, SUM(tuition) AS totalTuition, COUNT(*) AS totalPayment, SUM(balance) as balance FROM ${req?.session?.databaseName}_payment_record WHERE WEEK(DOP) = WEEK(?) AND term = ? AND session = ? AND payment_for LIKE '%fees%' AND class IN (?) GROUP BY class`;
     } else {
-      sql = `SELECT class, SUM(amount_paid) AS overTotal, SUM(pta) AS totalPTA, SUM(lesson) AS totalLesson, SUM(tuition) AS totalTuition, COUNT(*) AS totalPayment, SUM(balance) as balance FROM ${req?.session?.databaseName}_payment_record WHERE WEEK(created_at) = WEEK(?) AND term = ? AND session = ? AND payment_for NOT IN (?) AND class IN (?) GROUP BY class`;
+      sql = `SELECT class, SUM(amount_paid) AS overTotal, SUM(pta) AS totalPTA, SUM(lesson) AS totalLesson, SUM(tuition) AS totalTuition, COUNT(*) AS totalPayment, SUM(balance) as balance FROM ${req?.session?.databaseName}_payment_record WHERE WEEK(created_at) = WEEK(?) AND term = ? AND session = ? AND payment_for LIKE '%fees%' AND class IN (?) GROUP BY class`;
     }
-    conn.query(sql, [date, term, sess, others, classes], (err, data) => {
+    conn.query(sql, [date, term, sess, classes], (err, data) => {
       if (err) {
         console.log(err);
         logToFile(

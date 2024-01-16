@@ -66,29 +66,6 @@ $accent-color: wheat;
     .input-filter-cont {
       flex: 1;
       width: 100%;
-      // border-radius: 5px;
-      // padding: 0rem;
-      // display: flex;
-      // flex-wrap: nowrap;
-      // align-items: center;
-      // padding: 0;
-      // max-height: 45px;
-      // // overflow: hidden;
-      // position: relative;
-
-      // @include pad {
-      //   width: 100%;
-      //   max-height: 40px;
-      // }
-      // @include desktop {
-      //   width: 80%;
-      // }
-      // @media screen and (min-width: 1020px) {
-      //   width: 50%;
-      // }
-      // @media screen and (min-width: 1050px) {
-      //   width: 30%;
-      // }
       span {
         width: 100%;
         min-width: 300px;
@@ -706,3 +683,4 @@ $accent-color: wheat;
   margin-right: 0;
   // margin-bottom: 2in;
 }
+

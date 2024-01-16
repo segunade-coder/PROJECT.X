@@ -82,9 +82,11 @@ const Payment = () => {
   const displayOnce = useRef(0);
   const displayOnce2 = useRef(0);
   const [accountant, setAccountant] = useState("");
+  const [studentId, setStudentId] = useState("");
   const [admNo, setAdmNo] = useState("");
   const [isThereBalance, setIsThereBalance] = useState(false);
   const [format] = useState(true);
+  const [isSelectFromDropdown, setIsSelectFormDropdown] = useState(false);
   // const displayOnce = useRef(0)
   useEffect(() => {
     fetch(`${url}/main/payment/classes`, {
@@ -183,13 +185,14 @@ const Payment = () => {
     }
   };
   let setNameFnc = (e) => {
-    if (e.value.name !== undefined) {
+    if (e.value?.name !== undefined) {
       setName(e.value.name);
     } else {
       setName(e.value);
     }
     toastRef.current.clear();
     setIsThereBalance(false);
+    setIsSelectFormDropdown(false);
   };
   let autoCompleteTemplate = (item) => {
     return (
@@ -427,9 +430,9 @@ const Payment = () => {
     ) {
       if (balance > 0) {
         setRemark(
-          `PART PAYMENT MADE FOR ${term.name}, THROUGH ${paymentMethod.name} (${
-            session.name
-          }) ${
+          `PART PAYMENT MADE FOR ${term.name} - ${
+            studentClass?.name || ""
+          }, THROUGH ${paymentMethod.name} (${session.name}) ${
             specialDiscount !== "" && specialDiscount?.toLowerCase() !== "none"
               ? specialDiscount
               : ""
@@ -438,9 +441,9 @@ const Payment = () => {
       }
       if (balance === 0) {
         setRemark(
-          `${term.name} PAYMENT FOR ${paymentFor.name}, THROUGH ${
-            paymentMethod.name
-          } (${session.name}) ${
+          `${term.name} PAYMENT FOR ${paymentFor.name} - ${
+            studentClass?.name || ""
+          }, THROUGH ${paymentMethod.name} (${session.name}) ${
             specialDiscount !== "" &&
             specialDiscount?.toLowerCase() !== "none" &&
             paymentFor.name?.toLowerCase() !== "busfare"
@@ -451,9 +454,9 @@ const Payment = () => {
       }
       if (balance === 0 && paymentFor.name.toLowerCase() === "part payment") {
         setRemark(
-          `${term.name} ${paymentFor.name} MADE, THROUGH ${
-            paymentMethod.name
-          } (${session.name}) ${
+          `${term.name} ${paymentFor.name} - ${
+            studentClass?.name || ""
+          } MADE, THROUGH ${paymentMethod.name} (${session.name}) ${
             specialDiscount !== "" &&
             specialDiscount?.toLowerCase() !== "none" &&
             paymentFor.name?.toLowerCase() !== "busfare"
@@ -464,9 +467,9 @@ const Payment = () => {
       }
       if (paymentFor.name.toLowerCase().includes("bus")) {
         setRemark(
-          `${term.name} PAYMENT MADE FOR ${paymentFor.name} THROUGH ${
-            paymentMethod.name
-          } (${session.name}) ${
+          `${term.name} PAYMENT MADE FOR ${paymentFor.name} - ${
+            studentClass?.name || ""
+          } THROUGH ${paymentMethod.name} (${session.name}) ${
             specialDiscount !== "" &&
             specialDiscount?.toLowerCase() !== "none" &&
             paymentFor.name?.toLowerCase() !== "busfare"
@@ -477,7 +480,9 @@ const Payment = () => {
       }
     }
   };
-
+  const onBlurAutocomplete = () => {
+    if (!isSelectFromDropdown) setName("");
+  };
   const findName = (name) => {
     name?.length > 1
       ? startTransition(() =>
@@ -500,11 +505,13 @@ const Payment = () => {
       : setAutoName([]);
   };
   const clickAutoName = (details) => {
+    setIsSelectFormDropdown(true);
     setName(details?.name?.toUpperCase());
     setStudentClass({ name: details?.class?.toUpperCase() });
     autoTotal(details?.class?.toUpperCase());
     setspecialDiscount(details?.discounts?.toUpperCase());
     setAdmNo(details?.adm_no);
+    setStudentId(details?.id);
     setAutoName([]);
     // autoTotal(details.name?.toUpperCase());
     displayOnce.current = 0;
@@ -588,6 +595,7 @@ const Payment = () => {
                     name,
                     paymentId,
                     studentClass: studentClass.name,
+                    studentId,
                     DOP: convertDate(new Date(DOP)),
                     DOB: DOB !== "" ? convertDate(new Date(DOB)) : "",
                     DOG: DOB !== "" ? convertDate(new Date(DOG)) : "",
@@ -655,7 +663,7 @@ const Payment = () => {
                 name,
                 paymentId,
                 studentClass: studentClass.name,
-                admNo,
+                studentId,
                 DOP: convertDate(new Date(DOP)),
                 DOB: DOB !== "" ? convertDate(new Date(DOB)) : "",
                 DOG: DOB !== "" ? convertDate(new Date(DOG)) : "",
@@ -729,7 +737,6 @@ const Payment = () => {
     );
     setSaveTimes(0);
     setDOP("");
-    setAdmNo("");
     setPaymentMethod("");
     setPaymentFor("");
     setTotalFee(0);
@@ -745,6 +752,7 @@ const Payment = () => {
     setDefaultWallet({ name: "CURRENT" });
     setIsThereBalance(false);
     toastRef.current.clear();
+    setIsSelectFormDropdown(false);
   };
   let showPrint = (key) => {
     if (key) {
@@ -862,6 +870,7 @@ const Payment = () => {
                     let datas = {
                       name,
                       paymentId,
+                      studentId,
                       studentClass: studentClass.name,
                       DOP: convertDate(new Date(DOP)),
                       DOB: DOB !== "" ? convertDate(new Date(DOB)) : "",
@@ -932,7 +941,7 @@ const Payment = () => {
                   name,
                   paymentId,
                   studentClass: studentClass.name,
-                  admNo,
+                  studentId,
                   DOP: convertDate(new Date(DOP)),
                   DOB: DOB !== "" ? convertDate(new Date(DOB)) : "",
                   DOG: DOB !== "" ? convertDate(new Date(DOG)) : "",
@@ -1125,7 +1134,7 @@ const Payment = () => {
             .join(" ")} of ${arr.class
             .split(" ")
             .map((clas) => clas.charAt(0).toUpperCase() + clas.slice(1))
-            .join(" ")} has a payment for this term for ${arr.term
+            .join(" ")} has a payment for this term ${arr.term
             .split(" ")
             .map((ter) => ter.charAt(0).toUpperCase() + ter.slice(1))
             .join(" ")}, ${arr.session}, ${
@@ -1177,7 +1186,9 @@ const Payment = () => {
               id="name"
               placeholder="Name"
               autoFocus={true}
+              // forceSelection={true}
               onSelect={(e) => clickAutoName(e.value)}
+              onBlur={() => onBlurAutocomplete()}
             />
           </div>
         </div>

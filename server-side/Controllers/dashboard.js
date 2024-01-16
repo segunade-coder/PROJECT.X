@@ -11,7 +11,9 @@ const db = new dbQueries(conn);
 // custom modules to log out where an error has occur and the line.
 const logErr = require("../connections/logErrors");
 const logToFile = require("../connections/logToFile");
-const format = true;
+const { production } = require("../connections/infos");
+let format;
+production ? false : true;
 let autoTotal = (student) => {
   try {
     let splitName = student?.split(" ");

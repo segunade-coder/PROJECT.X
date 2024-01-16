@@ -14,6 +14,7 @@ const Statement = () => {
   const [to, setTo] = useState("");
   const [classes, setClasses] = useState([]);
   const [debtors, setDebtors] = useState([]);
+  const [total, setTotal] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   let { url, notifications } = useContext(MainContext);
   const navigate = useNavigate();
@@ -87,7 +88,20 @@ const Statement = () => {
           setIsLoading(false);
           if (data.status) {
             setDebtors(data.message);
-            console.log(formatDate(data.message[4].DOP));
+            if (
+              data.message?.length !== "undefined" &&
+              data.message?.length > 0
+            ) {
+              let allAmount = [];
+              allAmount = data.message.map((item) => item?.amount_paid || 0);
+              setTotal(() =>
+                allAmount.reduce(
+                  (accumulator, currentValue) =>
+                    Number(accumulator) + Number(currentValue),
+                  0
+                )
+              );
+            }
           } else {
             notifications.warning(data.message);
           }
@@ -241,6 +255,7 @@ const Statement = () => {
                 )}
               </tbody>
             </table>
+            {!isLoading ? <p>Total: {Number(total).toLocaleString()}</p> : ""}
           </>
         )}
       </div>

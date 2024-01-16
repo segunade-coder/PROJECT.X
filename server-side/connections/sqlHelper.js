@@ -163,7 +163,7 @@ const createTables = (school) => {
     `${school}_payment_record`,
     { columnName: "name", dataType: "varchar" },
     { columnName: "class", dataType: "varchar" },
-    { columnName: "adm_no", datatype: "varchar" },
+    { columnName: "student_id", datatype: "varchar" },
     { columnName: "payment_id", dataType: "varchar" },
     { columnName: "amount_paid", dataType: "varchar" },
     { columnName: "PTA", dataType: "int" },

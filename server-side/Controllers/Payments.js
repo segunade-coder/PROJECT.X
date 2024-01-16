@@ -53,9 +53,17 @@ const autoCompleteFindName = (req, res) => {
     db.query(
       `SELECT * FROM ${
         req?.session?.databaseName
-      }_students WHERE name LIKE ${mysql.escape(
+      }_students WHERE (name LIKE ${mysql.escape(
         `%${name.toLowerCase()}%`
-      )} ORDER BY class`
+      )} OR guardian_id LIKE ${mysql.escape(
+        `%${name.toLowerCase()}%`
+      )} OR guardian_name LIKE ${mysql.escape(
+        `%${name.toLowerCase()}%`
+      )} OR adm_no LIKE ${mysql.escape(
+        `%${name.toLowerCase()}%`
+      )} OR phone_number LIKE ${mysql.escape(
+        `%${name.toLowerCase()}%`
+      )}) ORDER BY class`
     )
       .then((data) =>
         res.json({
@@ -112,7 +120,7 @@ const savePayment = async (req, res) => {
       session,
       loggedUser,
       defaultWallet,
-      admNo,
+      studentId,
     } = datas;
 
     // check if variables are empty
@@ -176,7 +184,7 @@ const savePayment = async (req, res) => {
               payment_id: paymentId,
               amount_paid: feePaid,
               expected_payment: Number(totalFee),
-              adm_no: admNo,
+              student_id: studentId || "",
               balance,
               term: term?.toLowerCase(),
               session: session,

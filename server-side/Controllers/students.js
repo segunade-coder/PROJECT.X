@@ -586,7 +586,7 @@ const updateStudentInfo = (req, res) => {
     )
       .then((data) => {
         logToFile(
-          "A Student information was updated",
+          `A Student ${name} of ${newClass} was updated`,
           req.session.user.user + " " + req.session.user.school
         );
 

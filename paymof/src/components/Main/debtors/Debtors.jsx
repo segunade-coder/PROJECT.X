@@ -151,7 +151,20 @@ const Debtors = () => {
           if (data.status) {
             setDebtors(data.message);
             setOthers(data.totalArr);
-            setOverAllTotal(0);
+            if (
+              data.message?.length !== "undefined" &&
+              data.message?.length > 0
+            ) {
+              let allAmount = [];
+              allAmount = data.message.map((item) => item?.amount_paid || 0);
+              setOverAllTotal(() =>
+                allAmount.reduce(
+                  (accumulator, currentValue) =>
+                    Number(accumulator) + Number(currentValue),
+                  0
+                )
+              );
+            }
           } else {
             notifications.warning(data.message, "this");
           }
@@ -162,17 +175,7 @@ const Debtors = () => {
         });
     }
   };
-  let autoTotal = () => {
-    let overTotal = 0;
-    let legitRecord = [];
-    legitRecord = debtors.map((record) => record?.expected_payment && record);
-    legitRecord = legitRecord.filter((record) => typeof record === "object");
-    legitRecord.map((total) => {
-      let sub = parseInt(total?.expected_payment) - parseInt(total?.balance);
-      return (overTotal += sub);
-    });
-    setOverAllTotal(overTotal);
-  };
+
   let onBlur = (e, id) => {
     if (e.value != undefined && e.value != "") {
       if (id === "filter-class") {
@@ -483,21 +486,13 @@ const Debtors = () => {
                     </tr>
                   ))
                 )}
-                <tr colSpan={8}>
-                  <td
-                    onClick={() => autoTotal()}
-                    style={{ fontWeight: "bold", cursor: "pointer" }}
-                    title="click for total"
-                  >
-                    Total:{" "}
-                  </td>
-                  <td colSpan={9}>
-                    &#x20A6;
-                    <span>{overAllTotal && overAllTotal.toLocaleString()}</span>
-                  </td>
-                </tr>
               </tbody>
             </table>
+            {!isLoading ? (
+              <p>Total: {Number(overAllTotal).toLocaleString()}</p>
+            ) : (
+              ""
+            )}
           </>
         )}
       </div>

@@ -121,23 +121,23 @@ const Fees = () => {
             let testWallet = new Map(JSON?.parse(newCls?.wallets));
             let setClass = async () => {
               testClass = await testClass.map((classe) => {
-                return { name: classe.toUpperCase() };
+                return { name: classe?.toUpperCase() };
               });
               testTerm = await testTerm.map((term) => {
-                return { name: term.toUpperCase() };
+                return { name: term?.toUpperCase() };
               });
               testSession = await testSession.map((session) => {
-                return { name: session.toUpperCase() };
+                return { name: session?.toUpperCase() };
               });
 
               testPaymentFor = await testPaymentFor.map((paymentFor) => {
-                return { name: paymentFor.toUpperCase() };
+                return { name: paymentFor?.toUpperCase() };
               });
               testMethod = await testMethod.map((methodFor) => {
-                return { name: methodFor.toUpperCase() };
+                return { name: methodFor?.toUpperCase() };
               });
               testWallet = await [...testWallet].map((wallet) => {
-                return { name: wallet[0].toUpperCase() };
+                return { name: wallet[0]?.toUpperCase() };
               });
               return {
                 testClass,
@@ -340,6 +340,7 @@ const Fees = () => {
     setFilteredTerm({ name: "" });
     document.querySelector(".filter-class").classList.add("filter");
     clearFilter();
+    clearFilter();
     let status = false;
     if (searchId > 0) status = true;
     else status = false;
@@ -365,6 +366,8 @@ const Fees = () => {
 
           if (data.status) {
             setRecords(() => data.message);
+            setTotalFee(data.total);
+            setTotalPages(Math?.ceil(data?.total / limit));
           }
         })
 
@@ -602,6 +605,12 @@ const Fees = () => {
           {item.name?.toUpperCase()}
         </span>
         <span className="class">{item.class?.toUpperCase()}</span>
+        <small
+          className="show-xtra"
+          style={{ fontSize: "0.60rem", marginLeft: ".5rem" }}
+        >
+          {item.term?.toUpperCase()} {item.session?.toUpperCase()}
+        </small>
       </div>
     );
   };

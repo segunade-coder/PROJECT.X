@@ -62,3 +62,166 @@ Login succesful  by admin global kids academy, on Sunday, October 15, 2023 at 4:
 Login succesful  by admin global kids academy, on Sunday, October 15, 2023 at 5:00:48 PM GMT+1
 The session has been destroyed!  by admin, on Sunday, October 15, 2023 at 5:08:57 PM GMT+1
 Login succesful  by admin global kids academy, on Sunday, October 15, 2023 at 5:27:40 PM GMT+1
+App is live. ✨  by user, on Tuesday, October 17, 2023 at 2:53:03 PM GMT+1
+App started. Connected to apache server succesfully  by user, on Tuesday, October 17, 2023 at 2:53:05 PM GMT+1
+Login succesful  by admin global kids academy, on Tuesday, October 17, 2023 at 2:55:14 PM GMT+1
+App is live. ✨  by user, on Tuesday, October 17, 2023 at 2:57:50 PM GMT+1
+App started. Connected to apache server succesfully  by user, on Tuesday, October 17, 2023 at 2:57:50 PM GMT+1
+checking for expired balance date  by user, on Tuesday, October 17, 2023 at 3:00:00 PM GMT+1
+user okpala williams chibuikem exist  by user, on Tuesday, October 17, 2023 at 3:00:00 PM GMT+1
+user nasiru shamsudeen bafarawa exist  by user, on Tuesday, October 17, 2023 at 3:00:00 PM GMT+1
+user dankani khalil labaran exist  by user, on Tuesday, October 17, 2023 at 3:00:00 PM GMT+1
+user bello samaila riskuwa exist  by user, on Tuesday, October 17, 2023 at 3:00:00 PM GMT+1
+user bello fatima bulaki exist  by user, on Tuesday, October 17, 2023 at 3:00:00 PM GMT+1
+user zubairu usman zainab exist  by user, on Tuesday, October 17, 2023 at 3:00:00 PM GMT+1
+user abdul-salam jamilat yusmeen exist  by user, on Tuesday, October 17, 2023 at 3:00:00 PM GMT+1
+user jibrin aliyu maimuna exist  by user, on Tuesday, October 17, 2023 at 3:00:00 PM GMT+1
+user okpala williams chibuikem exist  by user, on Tuesday, October 17, 2023 at 3:00:00 PM GMT+1
+user yusuf mukhtar abdulkarim exist  by user, on Tuesday, October 17, 2023 at 3:00:00 PM GMT+1
+user jibril mahmud fadeel exist  by user, on Tuesday, October 17, 2023 at 3:00:00 PM GMT+1
+user musa zahra exist  by user, on Tuesday, October 17, 2023 at 3:00:00 PM GMT+1
+user abubakar zeenat abubakar exist  by user, on Tuesday, October 17, 2023 at 3:00:00 PM GMT+1
+user suleiman hanifa almustapha exist  by user, on Tuesday, October 17, 2023 at 3:00:00 PM GMT+1
+user adeleye samuel opeyemi exist  by user, on Tuesday, October 17, 2023 at 3:00:00 PM GMT+1
+user abdulrahman aliyu usman exist  by user, on Tuesday, October 17, 2023 at 3:00:01 PM GMT+1
+The session has been destroyed!  by admin, on Tuesday, October 17, 2023 at 3:06:34 PM GMT+1
+Login succesful  by admin global kids academy, on Tuesday, October 17, 2023 at 3:07:59 PM GMT+1
+App is live. ✨  by user, on Thursday, October 19, 2023 at 1:56:24 PM GMT+1
+App started. Connected to apache server succesfully  by user, on Thursday, October 19, 2023 at 1:56:27 PM GMT+1
+Login succesful  by admin global kids academy, on Thursday, October 19, 2023 at 1:58:05 PM GMT+1
+Error: ER_BAD_FIELD_ERROR: Unknown column 'adm_no' in 'field list'  by admin global kids academy, on Thursday, October 19, 2023 at 2:03:51 PM GMT+1
+App is live. ✨  by user, on Thursday, October 19, 2023 at 2:05:55 PM GMT+1
+App started. Connected to apache server succesfully  by user, on Thursday, October 19, 2023 at 2:05:55 PM GMT+1
+App is live. ✨  by user, on Thursday, October 19, 2023 at 2:07:55 PM GMT+1
+App started. Connected to apache server succesfully  by user, on Thursday, October 19, 2023 at 2:07:55 PM GMT+1
+A Student abdullahi nuradeen of lower basic 2 was updated  by admin global kids academy, on Thursday, October 19, 2023 at 2:10:30 PM GMT+1
+App is live. ✨  by user, on Monday, October 23, 2023 at 11:06:01 AM GMT+1
+App started. Connected to apache server succesfully  by user, on Monday, October 23, 2023 at 11:06:02 AM GMT+1
+Login succesful  by admin global kids academy, on Monday, October 23, 2023 at 11:07:01 AM GMT+1
+Statement was requested  by admin global kids academy, on Monday, October 23, 2023 at 11:25:21 AM GMT+1
+Error: ER_BAD_NULL_ERROR: Column 'DOP' cannot be null  by admin global kids academy, on Monday, October 23, 2023 at 11:34:40 AM GMT+1
+Error: ER_BAD_NULL_ERROR: Column 'DOP' cannot be null  by admin global kids academy, on Monday, October 23, 2023 at 11:35:24 AM GMT+1
+Error: ER_BAD_NULL_ERROR: Column 'DOP' cannot be null  by admin global kids academy, on Monday, October 23, 2023 at 11:37:32 AM GMT+1
+A payment was made  by admin global kids academy, on Monday, October 23, 2023 at 11:40:46 AM GMT+1
+Money added to wallet  by admin global kids academy, on Monday, October 23, 2023 at 11:40:46 AM GMT+1
+Money added to PTA wallet  by admin global kids academy, on Monday, October 23, 2023 at 11:40:46 AM GMT+1
+The session has been destroyed!  by admin, on Monday, October 23, 2023 at 11:45:49 AM GMT+1
+Login succesful  by admin global kids academy, on Monday, October 23, 2023 at 11:47:49 AM GMT+1
+App is live. ✨  by user, on Tuesday, January 9, 2024 at 8:23:49 AM PST
+App started. Connected to apache server succesfully  by user, on Tuesday, January 9, 2024 at 8:23:50 AM PST
+App is live. ✨  by user, on Tuesday, January 9, 2024 at 8:28:00 AM PST
+App started. Connected to apache server succesfully  by user, on Tuesday, January 9, 2024 at 8:28:00 AM PST
+App is live. ✨  by user, on Tuesday, January 9, 2024 at 8:37:34 AM PST
+App started. Connected to apache server succesfully  by user, on Tuesday, January 9, 2024 at 8:37:35 AM PST
+App is live. ✨  by user, on Tuesday, January 9, 2024 at 9:32:21 AM PST
+App started. Connected to apache server succesfully  by user, on Tuesday, January 9, 2024 at 9:32:21 AM PST
+App is live. ✨  by user, on Tuesday, January 9, 2024 at 10:10:59 AM PST
+App started. Connected to apache server succesfully  by user, on Tuesday, January 9, 2024 at 10:10:59 AM PST
+Invalid password  by tee global kids academy, on Tuesday, January 9, 2024 at 10:11:27 AM PST
+Login succesful  by tee global kids academy, on Tuesday, January 9, 2024 at 10:11:33 AM PST
+The session has been destroyed!  by tee, on Tuesday, January 9, 2024 at 10:16:28 AM PST
+Login succesful  by admin oakcrest international college, on Tuesday, January 9, 2024 at 10:16:51 AM PST
+The session has been destroyed!  by admin, on Tuesday, January 9, 2024 at 10:18:35 AM PST
+Login succesful  by admin global kids academy, on Tuesday, January 9, 2024 at 10:19:02 AM PST
+Error: ER_BAD_NULL_ERROR: Column 'payment_method' cannot be null  by admin global kids academy, on Tuesday, January 9, 2024 at 10:31:04 AM PST
+The session has been destroyed!  by admin, on Tuesday, January 9, 2024 at 10:36:50 AM PST
+checking for expired balance date  by user, on Tuesday, January 9, 2024 at 12:00:00 PM PST
+user amarachi ezeonye exist  by user, on Tuesday, January 9, 2024 at 12:00:00 PM PST
+App is live. ✨  by user, on Friday, January 12, 2024 at 7:45:40 AM PST
+App started. Connected to apache server succesfully  by user, on Friday, January 12, 2024 at 7:45:40 AM PST
+App is live. ✨  by user, on Friday, January 12, 2024 at 7:45:44 AM PST
+App started. Connected to apache server succesfully  by user, on Friday, January 12, 2024 at 7:45:44 AM PST
+App is live. ✨  by user, on Friday, January 12, 2024 at 7:45:48 AM PST
+App started. Connected to apache server succesfully  by user, on Friday, January 12, 2024 at 7:45:48 AM PST
+App is live. ✨  by user, on Friday, January 12, 2024 at 7:45:53 AM PST
+App started. Connected to apache server succesfully  by user, on Friday, January 12, 2024 at 7:45:53 AM PST
+App is live. ✨  by user, on Friday, January 12, 2024 at 7:45:59 AM PST
+App started. Connected to apache server succesfully  by user, on Friday, January 12, 2024 at 7:45:59 AM PST
+App is live. ✨  by user, on Friday, January 12, 2024 at 7:46:05 AM PST
+App started. Connected to apache server succesfully  by user, on Friday, January 12, 2024 at 7:46:05 AM PST
+App is live. ✨  by user, on Friday, January 12, 2024 at 7:46:30 AM PST
+App started. Connected to apache server succesfully  by user, on Friday, January 12, 2024 at 7:46:30 AM PST
+Invalid password  by admin global kids academy, on Friday, January 12, 2024 at 7:48:51 AM PST
+Login succesful  by admin global kids academy, on Friday, January 12, 2024 at 7:48:57 AM PST
+App is live. ✨  by user, on Friday, January 12, 2024 at 7:58:49 AM PST
+App started. Connected to apache server succesfully  by user, on Friday, January 12, 2024 at 7:58:49 AM PST
+The session has been destroyed!  by admin, on Friday, January 12, 2024 at 7:58:49 AM PST
+Invalid password  by admin global kids academy, on Friday, January 12, 2024 at 8:00:18 AM PST
+Login succesful  by admin global kids academy, on Friday, January 12, 2024 at 8:00:26 AM PST
+App is live. ✨  by user, on Friday, January 12, 2024 at 8:05:41 AM PST
+App started. Connected to apache server succesfully  by user, on Friday, January 12, 2024 at 8:05:42 AM PST
+The session has been destroyed!  by admin, on Friday, January 12, 2024 at 8:09:58 AM PST
+The session has been destroyed!  by user, on Friday, January 12, 2024 at 8:10:00 AM PST
+checking for expired balance date  by user, on Friday, January 12, 2024 at 9:00:00 AM PST
+user okpala williams chibuikem exist  by user, on Friday, January 12, 2024 at 9:00:00 AM PST
+user nasiru shamsudeen bafarawa exist  by user, on Friday, January 12, 2024 at 9:00:00 AM PST
+user dankani khalil labaran exist  by user, on Friday, January 12, 2024 at 9:00:00 AM PST
+user bello samaila riskuwa exist  by user, on Friday, January 12, 2024 at 9:00:00 AM PST
+user bello fatima bulaki exist  by user, on Friday, January 12, 2024 at 9:00:00 AM PST
+user zubairu usman zainab exist  by user, on Friday, January 12, 2024 at 9:00:00 AM PST
+user abdulrahman aliyu usman exist  by user, on Friday, January 12, 2024 at 9:00:00 AM PST
+user adeleye samuel opeyemi exist  by user, on Friday, January 12, 2024 at 9:00:00 AM PST
+user abdul-salam jamilat yusmeen exist  by user, on Friday, January 12, 2024 at 9:00:00 AM PST
+user jibrin aliyu maimuna exist  by user, on Friday, January 12, 2024 at 9:00:00 AM PST
+user yusuf mukhtar abdulkarim exist  by user, on Friday, January 12, 2024 at 9:00:00 AM PST
+user okpala williams chibuikem exist  by user, on Friday, January 12, 2024 at 9:00:00 AM PST
+user musa zahra exist  by user, on Friday, January 12, 2024 at 9:00:00 AM PST
+user jibril mahmud fadeel exist  by user, on Friday, January 12, 2024 at 9:00:00 AM PST
+user abubakar zeenat abubakar exist  by user, on Friday, January 12, 2024 at 9:00:00 AM PST
+user suleiman hanifa almustapha exist  by user, on Friday, January 12, 2024 at 9:00:00 AM PST
+App is live. ✨  by user, on Friday, January 12, 2024 at 9:18:01 AM PST
+App started. Connected to apache server succesfully  by user, on Friday, January 12, 2024 at 9:18:01 AM PST
+Invalid password  by admin global kids academy, on Friday, January 12, 2024 at 9:18:37 AM PST
+Login succesful  by admin global kids academy, on Friday, January 12, 2024 at 9:18:43 AM PST
+The session has been destroyed!  by admin, on Friday, January 12, 2024 at 9:28:27 AM PST
+The session has been destroyed!  by user, on Friday, January 12, 2024 at 9:37:52 AM PST
+The session has been destroyed!  by user, on Friday, January 12, 2024 at 9:47:18 AM PST
+Login succesful  by admin global kids academy, on Friday, January 12, 2024 at 10:41:40 AM PST
+App is live. ✨  by user, on Monday, January 15, 2024 at 8:35:05 AM PST
+App started. Connected to apache server succesfully  by user, on Monday, January 15, 2024 at 8:35:05 AM PST
+App is live. ✨  by user, on Monday, January 15, 2024 at 8:43:21 AM PST
+App started. Connected to apache server succesfully  by user, on Monday, January 15, 2024 at 8:43:22 AM PST
+Edited class  by admin global kids academy, on Monday, January 15, 2024 at 8:51:20 AM PST
+App is live. ✨  by user, on Monday, January 15, 2024 at 8:53:06 AM PST
+App started. Connected to apache server succesfully  by user, on Monday, January 15, 2024 at 8:53:07 AM PST
+A payment was made  by admin global kids academy, on Monday, January 15, 2024 at 8:56:59 AM PST
+Money added to wallet  by admin global kids academy, on Monday, January 15, 2024 at 8:56:59 AM PST
+Money added to PTA wallet  by admin global kids academy, on Monday, January 15, 2024 at 8:56:59 AM PST
+checking for expired balance date  by user, on Monday, January 15, 2024 at 9:00:00 AM PST
+user okpala williams chibuikem exist  by user, on Monday, January 15, 2024 at 9:00:00 AM PST
+user nasiru shamsudeen bafarawa exist  by user, on Monday, January 15, 2024 at 9:00:00 AM PST
+user bello samaila riskuwa exist  by user, on Monday, January 15, 2024 at 9:00:00 AM PST
+user bello fatima bulaki exist  by user, on Monday, January 15, 2024 at 9:00:00 AM PST
+user abdulrahman aliyu usman exist  by user, on Monday, January 15, 2024 at 9:00:00 AM PST
+user adeleye samuel opeyemi exist  by user, on Monday, January 15, 2024 at 9:00:00 AM PST
+user jibrin aliyu maimuna exist  by user, on Monday, January 15, 2024 at 9:00:00 AM PST
+user abdul-salam jamilat yusmeen exist  by user, on Monday, January 15, 2024 at 9:00:00 AM PST
+user yusuf mukhtar abdulkarim exist  by user, on Monday, January 15, 2024 at 9:00:00 AM PST
+user zubairu usman zainab exist  by user, on Monday, January 15, 2024 at 9:00:00 AM PST
+user musa zahra exist  by user, on Monday, January 15, 2024 at 9:00:00 AM PST
+user abubakar zeenat abubakar exist  by user, on Monday, January 15, 2024 at 9:00:00 AM PST
+user suleiman hanifa almustapha exist  by user, on Monday, January 15, 2024 at 9:00:00 AM PST
+user okpala williams chibuikem exist  by user, on Monday, January 15, 2024 at 9:00:00 AM PST
+user dankani khalil labaran exist  by user, on Monday, January 15, 2024 at 9:00:00 AM PST
+user jibril mahmud fadeel exist  by user, on Monday, January 15, 2024 at 9:00:00 AM PST
+The session has been destroyed!  by admin, on Monday, January 15, 2024 at 9:03:08 AM PST
+The session has been destroyed!  by user, on Monday, January 15, 2024 at 9:08:08 AM PST
+Login succesful  by admin global kids academy, on Monday, January 15, 2024 at 9:21:50 AM PST
+The session has been destroyed!  by admin, on Monday, January 15, 2024 at 9:30:15 AM PST
+Invalid password  by admin global kids academy, on Monday, January 15, 2024 at 9:33:36 AM PST
+Invalid password  by admin global kids academy, on Monday, January 15, 2024 at 9:34:12 AM PST
+Login succesful  by admin global kids academy, on Monday, January 15, 2024 at 9:34:16 AM PST
+App is live. ✨  by user, on Monday, January 15, 2024 at 9:47:45 AM PST
+App started. Connected to apache server succesfully  by user, on Monday, January 15, 2024 at 9:47:46 AM PST
+App is live. ✨  by user, on Monday, January 15, 2024 at 9:49:27 AM PST
+App started. Connected to apache server succesfully  by user, on Monday, January 15, 2024 at 9:49:28 AM PST
+App is live. ✨  by user, on Monday, January 15, 2024 at 9:49:42 AM PST
+App started. Connected to apache server succesfully  by user, on Monday, January 15, 2024 at 9:49:42 AM PST
+App is live. ✨  by user, on Monday, January 15, 2024 at 9:50:19 AM PST
+App started. Connected to apache server succesfully  by user, on Monday, January 15, 2024 at 9:50:19 AM PST
+App is live. ✨  by user, on Monday, January 15, 2024 at 9:53:03 AM PST
+App started. Connected to apache server succesfully  by user, on Monday, January 15, 2024 at 9:53:03 AM PST
+App is live. ✨  by user, on Monday, January 15, 2024 at 9:53:54 AM PST
+App started. Connected to apache server succesfully  by user, on Monday, January 15, 2024 at 9:53:54 AM PST
+App is live. ✨  by user, on Monday, January 15, 2024 at 9:54:17 AM PST
+App started. Connected to apache server succesfully  by user, on Monday, January 15, 2024 at 9:54:18 AM PST

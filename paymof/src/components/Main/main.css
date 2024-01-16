@@ -403,6 +403,12 @@ svg:active::after {
   margin-right: 0;
   border: 1px solid var(--secondaryTextIcon) !important;
 }
+.home header .user .p-splitbutton .p.button-label .p-c {
+  color: var(--secondaryTextColor) !important;
+}
+.home header .user .p-splitbutton svg {
+  color: var(--secondaryTextColor) !important;
+}
 @media only screen and (min-width: 760px) {
   .home header .user {
     display: flex;
@@ -657,4 +663,11 @@ svg:active::after {
   border-radius: 50%;
   transform: scale(0.5);
   transform: translate(10px, -5px);
+}
+
+.custom-autocom:hover .show-xtra {
+  visibility: visible !important;
+}
+.custom-autocom .show-xtra {
+  visibility: hidden;
 }/*# sourceMappingURL=main.css.map */

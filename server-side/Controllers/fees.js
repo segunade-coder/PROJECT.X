@@ -111,9 +111,22 @@ const findSearch = (req, res) => {
   // destructure variables from object
   let { status, name, searchId } = req.body;
   let formattedName = mysql.escape(`%${name.toLowerCase().trim()}%`);
+  let total = 0;
 
   // if status is true that ie: we are fetching record through payment id
   if (status) {
+    db.query(
+      `SELECT COUNT(*) as total FROM ${
+        req?.session?.databaseName
+      }_payment_record WHERE payment_id = ${mysql.escape(
+        searchId
+      )} OR keyid = ${mysql.escape(
+        searchId
+      )}) AND balance > 0 GROUP BY keyid ORDER BY created_at ASC`
+    )
+      .then((data) => (total = data.length))
+      .catch((err) => console.log(err));
+
     db.query(
       `SELECT *, SUM(amount_paid) AS TotalPaid FROM ${
         req?.session?.databaseName
@@ -129,6 +142,7 @@ const findSearch = (req, res) => {
           res.json({
             status: true,
             message: data,
+            total,
           });
         }
       })
@@ -147,17 +161,29 @@ const findSearch = (req, res) => {
   } else {
     // if status is false that is: we are fetching record either by name or by payment id using a wildcard "LIKE"
     db.query(
+      `SELECT COUNT(*) as total FROM ${
+        req?.session?.databaseName
+      }_payment_record WHERE (name LIKE ${formattedName} OR payment_id = ${mysql.escape(
+        name
+      )} OR keyid = ${mysql.escape(name)}) AND balance > 0 GROUP BY keyid`
+    )
+      .then((data) => (total = data.length))
+      .catch((err) => console.log(err));
+    db.query(
       `SELECT *, SUM(amount_paid) AS TotalPaid FROM ${
         req?.session?.databaseName
       }_payment_record WHERE (name LIKE ${formattedName} OR payment_id = ${mysql.escape(
         name
-      )} OR keyid = ${mysql.escape(searchId)}) AND balance > 0 GROUP BY keyid`
+      )} OR keyid = ${mysql.escape(
+        name
+      )}) AND balance > 0 GROUP BY keyid ORDER BY created_at`
     )
       .then((data) => {
         if (data) {
           res.json({
             status: true,
             message: data,
+            total,
           });
         }
       })
@@ -184,7 +210,7 @@ const loadAllPaymentRecords = (req, res) => {
   const offset = (page - 1) * limit;
   let total = 0;
 
-  // fetch the total number of records we have that have balance greater than '0'. so as to know the number of pagnation buttons to have
+  // fetch the total number of records we have that have balance greater than '0'. so as to know the number of pagination buttons to have
   db.query(
     `SELECT COUNT(*) as total FROM ${req?.session?.databaseName}_payment_record WHERE balance > 0 GROUP BY keyid`
   )
