@@ -367,6 +367,7 @@ const findDebtors = (req, res) => {
           message: "Enter the necessaey fields",
         });
       } else {
+        // get all with balance payment 
         db.query(
           `SELECT * FROM ${
             req?.session?.databaseName
@@ -380,6 +381,7 @@ const findDebtors = (req, res) => {
             let names2 = [];
             if (data.length !== 0) {
               let names = data?.map((ind) => ind?.keyid);
+              // get people that has paid
               db.query(
                 `SELECT name FROM ${
                   req?.session?.databaseName
@@ -389,11 +391,11 @@ const findDebtors = (req, res) => {
                   ?.toLowerCase()
                   ?.trim()}" AND (payment_for LIKE '%fees%' OR payment_for = 'pta')) GROUP BY keyid ORDER BY created_at ASC`
               ).then((data2) => {
-                names2 = data2?.map((ind) => ind?.name);
+                names2 = data2?.map((ind) => ind?.student_id);
 
                 if (names2.length !== 0) {
                   conn.query(
-                    `SELECT name, class, discounts, phone_number FROM ${req?.session?.databaseName}_students WHERE class = ? AND name NOT IN (?) AND status = ? AND discounts <> 'scholarship' ORDER BY discounts`,
+                    `SELECT name, class, discounts, phone_number FROM ${req?.session?.databaseName}_students WHERE class = ? AND id NOT IN (?) AND status = ? AND discounts <> 'scholarship' ORDER BY discounts`,
                     [filteredClass?.toLowerCase()?.trim(), names2, "active"],
                     (err, restStudent) => {
                       if (err) {
@@ -438,11 +440,11 @@ const findDebtors = (req, res) => {
               )
                 .then((data3) => {
                   let names = data3?.map((ind) => ind?.keyid);
-                  let names3 = data3?.map((ind) => ind?.name);
+                  let names3 = data3?.map((ind) => ind?.student_id);
                   // console.log(names3);
                   if (names3.length !== 0) {
                     conn.query(
-                      `SELECT name, class, discounts, phone_number FROM ${req?.session?.databaseName}_students WHERE name NOT IN (?) AND class = ? AND status = 'active'  AND discounts <> 'scholarship' ORDER BY discounts`,
+                      `SELECT name, class, discounts, phone_number FROM ${req?.session?.databaseName}_students WHERE id NOT IN (?) AND class = ? AND status = 'active'  AND discounts <> 'scholarship' ORDER BY discounts`,
                       [names3, filteredClass?.toLowerCase()?.trim()],
                       (err, restStud) => {
                         if (err) {
@@ -624,9 +626,9 @@ const findDebtors = (req, res) => {
           .then((data) => {
             if (data.length !== 0) {
               let names = data?.map((ind) => ind?.keyid);
-              let names2 = data?.map((ind) => ind?.name);
+              let names2 = data?.map((ind) => ind?.student_id);
               conn.query(
-                `SELECT name, class, discounts, phone_number FROM ${req?.session?.databaseName}_students WHERE name NOT IN (?) AND class = ? AND status = ? ORDER BY discounts`,
+                `SELECT name, class, discounts, phone_number FROM ${req?.session?.databaseName}_students WHERE id NOT IN (?) AND class = ? AND status = ? ORDER BY discounts`,
                 [names2, filteredClass?.toLowerCase()?.trim(), "active"],
                 (err, restStud) => {
                   if (err) {

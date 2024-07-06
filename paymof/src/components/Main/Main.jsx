@@ -147,17 +147,13 @@ const Main = () => {
 
   useEffect(() => {
     io.on("connect", () => {
-      console.log("connected");
       setIsConnected(true);
     });
 
     io.on("connect_failed", () => {
-      console.log("failed");
       setIsConnected(false);
     });
     io.on("connect_error", () => {
-      console.log("error");
-      console.clear();
       setIsConnected(false);
     });
     io.on("disconnect", () => {

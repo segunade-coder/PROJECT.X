@@ -396,3 +396,178 @@ $accent-color: wheat;
     }
   }
 }
+.print-modal {
+  padding: 1rem 0;
+
+  @media print {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 !important;
+    margin: 0;
+  }
+  @include pad {
+    padding: 1.5rem 0;
+  }
+  .modal-body {
+    overflow: hidden;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10rem;
+
+    @media print {
+      font-family: "Open-Sans", sans-serif;
+      margin: 0 !important;
+      padding: 3rem 0.7rem;
+      * {
+        color: black !important;
+      }
+    }
+
+    @include pad {
+      max-width: 400px;
+      width: 400px;
+      margin-top: 20rem;
+      @media print {
+        margin-top: 0 !important;
+      }
+    }
+    @include desktop {
+      max-width: 400px;
+      width: 400px;
+    }
+    @media screen and (max-width: 500px) {
+      width: 95%;
+      @media print {
+        width: 100%;
+      }
+    }
+    @include small {
+      width: 95%;
+      @media print {
+        width: 100%;
+      }
+    }
+
+    .header {
+      display: none;
+    }
+    .content {
+      font-size: 14px;
+      padding: 0.1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      // font-family: "";
+      h4 {
+        text-align: center;
+        margin: 0.5rem;
+        font-size: 18px;
+      }
+
+      .img-cont {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+        img {
+          object-fit: cover;
+          object-position: top;
+          width: 300px;
+          height: 200px;
+          transform: scale(0.95);
+        }
+      }
+      .student-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        margin-bottom: 0.5rem;
+        margin-top: 1rem;
+
+        table {
+          thead {
+            tr {
+              @media print {
+                border-color: #cac8c8;
+              }
+              td,
+              th {
+                @media print {
+                  color: black !important;
+                }
+              }
+            }
+          }
+        }
+      }
+      .fee-info {
+        display: flex;
+        flex-direction: column;
+
+        table {
+          font-size: 13px;
+          thead,
+          tbody {
+            tr {
+              @media print {
+                border-color: #cac8c8;
+              }
+              td,
+              th {
+                @media print {
+                  color: black !important;
+                }
+                word-wrap: break-word;
+                &:nth-child(1) {
+                  width: fit-content;
+                  min-width: 90px;
+                }
+              }
+            }
+          }
+        }
+        h4 {
+          text-align: center;
+          margin: 0.4rem;
+        }
+      }
+      .others-cont {
+        margin: 1rem 0 0;
+      }
+      .others {
+        display: flex;
+        flex-wrap: nowrap;
+        div {
+          font-weight: bold;
+          width: 100px;
+        }
+      }
+      @media print {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+  footer {
+    @media print {
+      display: none;
+      margin: 3rem;
+    }
+    padding: 0;
+  }
+}
+@media print {
+  form {
+    display: none !important;
+  }
+  .print-modal {
+    display: flex !important;
+  }
+}
+@page {
+  margin-left: 0;
+  margin-right: 0;
+  // margin-bottom: 2in;
+}

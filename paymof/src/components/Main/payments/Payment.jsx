@@ -85,7 +85,7 @@ const Payment = () => {
   const [studentId, setStudentId] = useState("");
   const [admNo, setAdmNo] = useState("");
   const [isThereBalance, setIsThereBalance] = useState(false);
-  const [format] = useState(true);
+  const [format] = useState(false);
   const [isSelectFromDropdown, setIsSelectFormDropdown] = useState(false);
   // const displayOnce = useRef(0)
   useEffect(() => {
@@ -234,7 +234,6 @@ const Payment = () => {
           }
         }
         if (splitName[0].toLowerCase() === "nursery" && splitName.length > 2) {
-          console.log();
           if (splitName.join(" ").toLowerCase().includes("admission"));
           else splitName.pop();
         }
@@ -244,6 +243,9 @@ const Payment = () => {
         ) {
           let newSplitName = [splitName[0], splitName[1]];
           splitName = newSplitName;
+        }
+        if (splitName[0].toLowerCase() === "pre" && splitName.length > 2) {
+          splitName.pop();
         }
       }
 
@@ -255,10 +257,10 @@ const Payment = () => {
       pta_name.push("PTA");
       // console.log(splitName);
       if (autoFees.has(lesson_name?.join(" ")?.toLowerCase()))
-        setLesson(autoFees.get(lesson_name?.join(" ")?.toLowerCase()) || "");
+        setLesson(autoFees.get(lesson_name?.join(" ")?.toLowerCase()));
       else setLesson("");
       if (autoFees.has(pta_name?.join(" ")?.toLowerCase()))
-        setPTA(autoFees.get(pta_name?.join(" ")?.toLowerCase()) || "");
+        setPTA(autoFees.get(pta_name?.join(" ")?.toLowerCase()));
       else setPTA("");
       if (returnName) {
         return splitName;
@@ -298,6 +300,9 @@ const Payment = () => {
         ) {
           let newSplitName = [splitName[0], splitName[1]];
           splitName = newSplitName;
+        }
+        if (splitName[0].toLowerCase() === "pre" && splitName.length > 2) {
+          splitName.pop();
         }
       }
       autoFees?.has(splitName?.join(" ")?.toLowerCase()) &&
@@ -517,19 +522,20 @@ const Payment = () => {
     displayOnce.current = 0;
     displayOnce2.current = 0;
     findBalance(
+      details.id,
       details.name.toLowerCase().trim(),
       details?.class?.toLowerCase().trim()
     );
   };
-  const findBalance = (name, classes) => {
+  const findBalance = (id, name, classes) => {
     if (name !== "") {
       io.emit("check_balance", {
-        name: name.toLowerCase(),
+        id: id,
         loggedSchool: loggedSchool.trim().toLowerCase(),
         loggedUser,
       });
       io.emit("check_any_payment", {
-        name: name.toLowerCase(),
+        id: id,
         loggedSchool: loggedSchool.trim().toLowerCase(),
         loggedUser,
         term: term?.name,

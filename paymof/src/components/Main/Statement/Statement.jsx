@@ -1,11 +1,12 @@
 /* eslint-disable no-dupe-keys */
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { MainContext } from "../Helpers/Context";
 import "../debtors/debtors.css";
 import ReactHTMLTableToExcel from "react-html-table-to-excel";
 import { Dropdown } from "primereact/dropdown";
 import { Button } from "primereact/button";
 import { Ripple } from "primereact/ripple";
+import ReactToPrint from "react-to-print";
 import { Calendar } from "primereact/calendar";
 import { useNavigate } from "react-router-dom";
 const Statement = () => {
@@ -18,7 +19,7 @@ const Statement = () => {
   const [isLoading, setIsLoading] = useState(false);
   let { url, notifications } = useContext(MainContext);
   const navigate = useNavigate();
-
+  const printComponent = useRef(null);
   let fetchFilters = () => {
     fetch(`${url}/main/payment/classes`, {
       method: "GET",
@@ -208,10 +209,23 @@ const Statement = () => {
                 sheet="tablexls"
                 buttonText="Download XLS"
               />
+
+              <ReactToPrint
+                trigger={() => (
+                  <Button
+                    icon="pi pi-print"
+                    size="small"
+                    label="Print"
+                    style={{ marginLeft: "1rem" }}
+                  />
+                )}
+                content={() => printComponent.current}
+              />
             </div>
             <table
-              className="table table-responsive table-bordered"
+              className="table table-responsive table-bordered my-3 mx-2"
               id="table-to-xls"
+              ref={printComponent}
             >
               <thead className="thead-dark">
                 <tr>

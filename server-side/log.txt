@@ -225,3 +225,149 @@ App is live. ✨  by user, on Monday, January 15, 2024 at 9:53:54 AM PST
 App started. Connected to apache server succesfully  by user, on Monday, January 15, 2024 at 9:53:54 AM PST
 App is live. ✨  by user, on Monday, January 15, 2024 at 9:54:17 AM PST
 App started. Connected to apache server succesfully  by user, on Monday, January 15, 2024 at 9:54:18 AM PST
+App is live. ✨  by user, on Tuesday, January 30, 2024 at 5:13:13 PM PST
+App started. Connected to apache server succesfully  by user, on Tuesday, January 30, 2024 at 5:13:14 PM PST
+App is live. ✨  by user, on Tuesday, February 6, 2024 at 12:44:22 PM PST
+App is live. ✨  by user, on Tuesday, February 6, 2024 at 12:46:26 PM PST
+App started. Connected to apache server succesfully  by user, on Tuesday, February 6, 2024 at 12:46:27 PM PST
+Login succesful  by admin global kids academy, on Tuesday, February 6, 2024 at 12:50:08 PM PST
+App is live. ✨  by user, on Tuesday, February 6, 2024 at 12:52:28 PM PST
+App started. Connected to apache server succesfully  by user, on Tuesday, February 6, 2024 at 12:52:29 PM PST
+App is live. ✨  by user, on Tuesday, February 6, 2024 at 12:53:33 PM PST
+App started. Connected to apache server succesfully  by user, on Tuesday, February 6, 2024 at 12:53:33 PM PST
+App is live. ✨  by user, on Tuesday, February 6, 2024 at 1:02:52 PM PST
+App started. Connected to apache server succesfully  by user, on Tuesday, February 6, 2024 at 1:02:52 PM PST
+App is live. ✨  by user, on Tuesday, February 6, 2024 at 1:03:07 PM PST
+App started. Connected to apache server succesfully  by user, on Tuesday, February 6, 2024 at 1:03:07 PM PST
+Debtor list was requested  by admin global kids academy, on Tuesday, February 6, 2024 at 1:13:41 PM PST
+Debtor list was requested  by admin global kids academy, on Tuesday, February 6, 2024 at 1:13:53 PM PST
+All list was requested  by admin global kids academy, on Tuesday, February 6, 2024 at 1:13:59 PM PST
+All list was requested  by admin global kids academy, on Tuesday, February 6, 2024 at 1:14:56 PM PST
+A Student abdulrahman aliyu usman of lower basic 2 mercury was updated  by admin global kids academy, on Tuesday, February 6, 2024 at 1:15:35 PM PST
+Debtor list was requested  by admin global kids academy, on Tuesday, February 6, 2024 at 1:15:47 PM PST
+The session has been destroyed!  by admin, on Tuesday, February 6, 2024 at 1:33:43 PM PST
+Invalid password  by admin global kids academy, on Tuesday, February 6, 2024 at 1:34:04 PM PST
+Login succesful  by admin global kids academy, on Tuesday, February 6, 2024 at 1:34:11 PM PST
+The session has been destroyed!  by admin, on Tuesday, February 6, 2024 at 1:48:49 PM PST
+App is live. ✨  by user, on Wednesday, February 7, 2024 at 9:08:54 AM PST
+App started. Connected to apache server succesfully  by user, on Wednesday, February 7, 2024 at 9:08:55 AM PST
+Login succesful  by admin global kids academy, on Wednesday, February 7, 2024 at 9:11:27 AM PST
+A payment was balanced  by admin global kids academy, on Wednesday, February 7, 2024 at 9:15:30 AM PST
+The session has been destroyed!  by admin, on Wednesday, February 7, 2024 at 9:20:55 AM PST
+Login succesful  by admin global kids academy, on Wednesday, February 7, 2024 at 9:24:15 AM PST
+A payment was balanced  by admin global kids academy, on Wednesday, February 7, 2024 at 9:25:03 AM PST
+The session has been destroyed!  by admin, on Wednesday, February 7, 2024 at 9:30:26 AM PST
+The session has been destroyed!  by user, on Wednesday, February 7, 2024 at 9:30:26 AM PST
+The session has been destroyed!  by user, on Wednesday, February 7, 2024 at 10:10:22 AM PST
+The session has been destroyed!  by user, on Wednesday, February 7, 2024 at 10:10:22 AM PST
+checking for expired balance date  by user, on Wednesday, February 7, 2024 at 12:00:01 PM PST
+user okpala williams chibuikem exist  by user, on Wednesday, February 7, 2024 at 12:00:02 PM PST
+user nasiru shamsudeen bafarawa exist  by user, on Wednesday, February 7, 2024 at 12:00:02 PM PST
+user dankani khalil labaran exist  by user, on Wednesday, February 7, 2024 at 12:00:02 PM PST
+user bello samaila riskuwa exist  by user, on Wednesday, February 7, 2024 at 12:00:02 PM PST
+user zubairu usman zainab exist  by user, on Wednesday, February 7, 2024 at 12:00:02 PM PST
+user abdulrahman aliyu usman exist  by user, on Wednesday, February 7, 2024 at 12:00:02 PM PST
+user adeleye samuel opeyemi exist  by user, on Wednesday, February 7, 2024 at 12:00:02 PM PST
+user abdul-salam jamilat yusmeen exist  by user, on Wednesday, February 7, 2024 at 12:00:02 PM PST
+user yusuf mukhtar abdulkarim exist  by user, on Wednesday, February 7, 2024 at 12:00:02 PM PST
+user okpala williams chibuikem exist  by user, on Wednesday, February 7, 2024 at 12:00:02 PM PST
+user musa zahra exist  by user, on Wednesday, February 7, 2024 at 12:00:02 PM PST
+user jibril mahmud fadeel exist  by user, on Wednesday, February 7, 2024 at 12:00:02 PM PST
+user abubakar zeenat abubakar exist  by user, on Wednesday, February 7, 2024 at 12:00:02 PM PST
+user suleiman hanifa almustapha exist  by user, on Wednesday, February 7, 2024 at 12:00:02 PM PST
+App is live. ✨  by user, on Wednesday, February 7, 2024 at 1:47:26 PM PST
+App is live. ✨  by user, on Wednesday, February 7, 2024 at 1:47:29 PM PST
+App started. Connected to apache server succesfully  by user, on Wednesday, February 7, 2024 at 1:47:30 PM PST
+App is live. ✨  by user, on Wednesday, February 7, 2024 at 2:10:42 PM PST
+App started. Connected to apache server succesfully  by user, on Wednesday, February 7, 2024 at 2:10:42 PM PST
+App is live. ✨  by user, on Wednesday, February 7, 2024 at 2:10:57 PM PST
+App started. Connected to apache server succesfully  by user, on Wednesday, February 7, 2024 at 2:10:57 PM PST
+App is live. ✨  by user, on Tuesday, March 5, 2024 at 9:12:38 AM GMT
+App is live. ✨  by user, on Tuesday, March 5, 2024 at 9:13:52 AM GMT
+App started. Connected to apache server succesfully  by user, on Tuesday, March 5, 2024 at 9:13:52 AM GMT
+Login succesful  by admin global kids academy, on Tuesday, March 5, 2024 at 9:16:33 AM GMT
+App is live. ✨  by user, on Tuesday, March 5, 2024 at 9:35:41 AM GMT
+App started. Connected to apache server succesfully  by user, on Tuesday, March 5, 2024 at 9:35:42 AM GMT
+A payment was balanced  by admin global kids academy, on Tuesday, March 5, 2024 at 9:36:39 AM GMT
+A payment was balanced  by admin global kids academy, on Tuesday, March 5, 2024 at 9:46:16 AM GMT
+A payment was balanced  by admin global kids academy, on Tuesday, March 5, 2024 at 9:46:42 AM GMT
+A payment was balanced  by admin global kids academy, on Tuesday, March 5, 2024 at 9:47:20 AM GMT
+Debtor list was requested  by admin global kids academy, on Tuesday, March 5, 2024 at 9:50:37 AM GMT
+All list was requested  by admin global kids academy, on Tuesday, March 5, 2024 at 9:51:38 AM GMT
+some students were promoted succesfully and receipt class changed  by admin global kids academy, on Tuesday, March 5, 2024 at 9:52:25 AM GMT
+Debtor list was requested  by admin global kids academy, on Tuesday, March 5, 2024 at 9:52:38 AM GMT
+The session has been destroyed!  by admin, on Tuesday, March 5, 2024 at 10:01:15 AM GMT
+App is live. ✨  by user, on Thursday, March 7, 2024 at 7:39:40 AM GMT
+App started. Connected to apache server succesfully  by user, on Thursday, March 7, 2024 at 7:39:40 AM GMT
+App is live. ✨  by user, on Thursday, March 7, 2024 at 7:48:40 AM GMT
+App started. Connected to apache server succesfully  by user, on Thursday, March 7, 2024 at 7:48:40 AM GMT
+Login succesful  by admin global kids academy, on Thursday, March 7, 2024 at 7:49:05 AM GMT
+ReferenceError: name is not defined  by global_kids_academy admin, on Thursday, March 7, 2024 at 7:50:08 AM GMT
+ReferenceError: name is not defined  by global_kids_academy admin, on Thursday, March 7, 2024 at 7:50:08 AM GMT
+ReferenceError: name is not defined  by global_kids_academy admin, on Thursday, March 7, 2024 at 7:50:48 AM GMT
+ReferenceError: name is not defined  by global_kids_academy admin, on Thursday, March 7, 2024 at 7:50:48 AM GMT
+A payment was made  by admin global kids academy, on Thursday, March 7, 2024 at 7:51:38 AM GMT
+Money added to wallet  by admin global kids academy, on Thursday, March 7, 2024 at 7:51:38 AM GMT
+Money added to PTA wallet  by admin global kids academy, on Thursday, March 7, 2024 at 7:51:39 AM GMT
+ReferenceError: name is not defined  by global_kids_academy admin, on Thursday, March 7, 2024 at 7:51:48 AM GMT
+ReferenceError: name is not defined  by global_kids_academy admin, on Thursday, March 7, 2024 at 7:51:48 AM GMT
+App is live. ✨  by user, on Thursday, March 7, 2024 at 8:00:49 AM GMT
+App started. Connected to apache server succesfully  by user, on Thursday, March 7, 2024 at 8:00:49 AM GMT
+The session has been destroyed!  by admin, on Thursday, March 7, 2024 at 8:00:50 AM GMT
+Invalid password  by admin global kids academy, on Thursday, March 7, 2024 at 8:01:24 AM GMT
+Login succesful  by admin global kids academy, on Thursday, March 7, 2024 at 8:01:28 AM GMT
+App is live. ✨  by user, on Thursday, March 7, 2024 at 8:11:42 AM GMT
+App started. Connected to apache server succesfully  by user, on Thursday, March 7, 2024 at 8:11:42 AM GMT
+App is live. ✨  by user, on Thursday, March 7, 2024 at 8:14:06 AM GMT
+App started. Connected to apache server succesfully  by user, on Thursday, March 7, 2024 at 8:14:06 AM GMT
+App is live. ✨  by user, on Thursday, March 7, 2024 at 8:15:47 AM GMT
+App started. Connected to apache server succesfully  by user, on Thursday, March 7, 2024 at 8:15:48 AM GMT
+App is live. ✨  by user, on Wednesday, April 24, 2024 at 8:06:09 AM GMT+1
+App is live. ✨  by user, on Wednesday, April 24, 2024 at 8:09:57 AM GMT+1
+App started. Connected to apache server succesfully  by user, on Wednesday, April 24, 2024 at 8:09:57 AM GMT+1
+Login succesful  by admin global kids academy, on Wednesday, April 24, 2024 at 8:10:25 AM GMT+1
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY keyid ORDER BY created_at' at line 1  by admin, on Wednesday, April 24, 2024 at 8:11:02 AM GMT+1
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY keyid ORDER BY created_at' at line 1  by admin, on Wednesday, April 24, 2024 at 8:12:43 AM GMT+1
+App is live. ✨  by user, on Wednesday, April 24, 2024 at 8:17:18 AM GMT+1
+App started. Connected to apache server succesfully  by user, on Wednesday, April 24, 2024 at 8:17:19 AM GMT+1
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY keyid ORDER BY created_at' at line 1  by admin, on Wednesday, April 24, 2024 at 8:17:23 AM GMT+1
+App is live. ✨  by user, on Wednesday, April 24, 2024 at 8:24:12 AM GMT+1
+App started. Connected to apache server succesfully  by user, on Wednesday, April 24, 2024 at 8:24:12 AM GMT+1
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY keyid ORDER BY created_at' at line 1  by admin, on Wednesday, April 24, 2024 at 8:29:46 AM GMT+1
+App is live. ✨  by user, on Wednesday, April 24, 2024 at 8:29:57 AM GMT+1
+App started. Connected to apache server succesfully  by user, on Wednesday, April 24, 2024 at 8:29:58 AM GMT+1
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY keyid ORDER BY created_at' at line 1  by admin, on Wednesday, April 24, 2024 at 8:30:02 AM GMT+1
+App is live. ✨  by user, on Wednesday, April 24, 2024 at 8:30:58 AM GMT+1
+App started. Connected to apache server succesfully  by user, on Wednesday, April 24, 2024 at 8:30:59 AM GMT+1
+App is live. ✨  by user, on Wednesday, April 24, 2024 at 8:40:36 AM GMT+1
+App started. Connected to apache server succesfully  by user, on Wednesday, April 24, 2024 at 8:40:36 AM GMT+1
+The session has been destroyed!  by admin, on Wednesday, April 24, 2024 at 8:59:34 AM GMT+1
+checking for expired balance date  by user, on Wednesday, April 24, 2024 at 9:00:00 AM GMT+1
+user okpala williams chibuikem exist  by user, on Wednesday, April 24, 2024 at 9:00:00 AM GMT+1
+user nasiru shamsudeen bafarawa exist  by user, on Wednesday, April 24, 2024 at 9:00:00 AM GMT+1
+create notification text  by user, on Wednesday, April 24, 2024 at 9:00:00 AM GMT+1
+user bello samaila riskuwa exist  by user, on Wednesday, April 24, 2024 at 9:00:00 AM GMT+1
+user zubairu usman zainab exist  by user, on Wednesday, April 24, 2024 at 9:00:00 AM GMT+1
+user adeleye samuel opeyemi exist  by user, on Wednesday, April 24, 2024 at 9:00:00 AM GMT+1
+user abdul-salam jamilat yusmeen exist  by user, on Wednesday, April 24, 2024 at 9:00:00 AM GMT+1
+user yusuf mukhtar abdulkarim exist  by user, on Wednesday, April 24, 2024 at 9:00:00 AM GMT+1
+user musa zahra exist  by user, on Wednesday, April 24, 2024 at 9:00:00 AM GMT+1
+user suleiman hanifa almustapha exist  by user, on Wednesday, April 24, 2024 at 9:00:00 AM GMT+1
+user jibril mahmud fadeel exist  by user, on Wednesday, April 24, 2024 at 9:00:00 AM GMT+1
+user okpala williams chibuikem exist  by user, on Wednesday, April 24, 2024 at 9:00:00 AM GMT+1
+Fetch expired Balance Date Succesful  by global kids academyadmin, on Wednesday, April 24, 2024 at 9:00:01 AM GMT+1
+user okpala williams chibuikem exist  by user, on Wednesday, April 24, 2024 at 9:00:01 AM GMT+1
+user nasiru shamsudeen bafarawa exist  by user, on Wednesday, April 24, 2024 at 9:00:01 AM GMT+1
+user abdullahi nuradeen exist  by user, on Wednesday, April 24, 2024 at 9:00:01 AM GMT+1
+user bello samaila riskuwa exist  by user, on Wednesday, April 24, 2024 at 9:00:01 AM GMT+1
+user zubairu usman zainab exist  by user, on Wednesday, April 24, 2024 at 9:00:01 AM GMT+1
+user adeleye samuel opeyemi exist  by user, on Wednesday, April 24, 2024 at 9:00:01 AM GMT+1
+user abdul-salam jamilat yusmeen exist  by user, on Wednesday, April 24, 2024 at 9:00:01 AM GMT+1
+user yusuf mukhtar abdulkarim exist  by user, on Wednesday, April 24, 2024 at 9:00:01 AM GMT+1
+user okpala williams chibuikem exist  by user, on Wednesday, April 24, 2024 at 9:00:01 AM GMT+1
+user suleiman hanifa almustapha exist  by user, on Wednesday, April 24, 2024 at 9:00:01 AM GMT+1
+user jibril mahmud fadeel exist  by user, on Wednesday, April 24, 2024 at 9:00:01 AM GMT+1
+user musa zahra exist  by user, on Wednesday, April 24, 2024 at 9:00:01 AM GMT+1
+App is live. ✨  by user, on Wednesday, April 24, 2024 at 10:37:41 AM GMT+1
+App started. Connected to apache server succesfully  by user, on Wednesday, April 24, 2024 at 10:37:41 AM GMT+1
+The session has been destroyed!  by user, on Wednesday, April 24, 2024 at 1:26:52 PM GMT+1

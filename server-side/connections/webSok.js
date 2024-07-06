@@ -1,6 +1,7 @@
 const logToFile = require("./logToFile");
 const dbQueries = require("./mysqlApi");
 const mysql = require("mysql");
+const logErr = require("./logErrors");
 let WebSok = (io, conn) => {
   try {
     const db = new dbQueries(conn);
@@ -75,15 +76,13 @@ let WebSok = (io, conn) => {
       });
       socket.on(
         "check_any_payment",
-        ({ name, loggedSchool, term, session, loggedUser, classes }) => {
+        ({ id, loggedSchool, term, session, loggedUser, classes }) => {
           try {
             loggedSchool = loggedSchool.replace(/ /g, "_") || "";
             try {
-              if (name && loggedSchool && term && session) {
+              if (id && loggedSchool && term && session) {
                 conn.query(
-                  `SELECT name, class, balance, payment_id, keyid, payment_for, SUM(amount_paid) AS total, term, session FROM ${loggedSchool}_payment_record WHERE (payment_for LIKE '%fees%' OR payment_for LIKE '%busfare%' OR payment_for = 'pta') AND name = ${mysql.escape(
-                    name
-                  )} AND term = ${mysql.escape(
+                  `SELECT name, class, balance, payment_id, keyid, payment_for, SUM(amount_paid) AS total, term, session FROM ${loggedSchool}_payment_record WHERE (payment_for LIKE '%fees%' OR payment_for LIKE '%busfare%' OR payment_for = 'pta') AND student_id = '${id}' AND term = ${mysql.escape(
                     term?.toLowerCase()
                   )} AND session = ${mysql.escape(
                     session
@@ -119,14 +118,12 @@ let WebSok = (io, conn) => {
           }
         }
       );
-      socket.on("check_balance", ({ name, loggedSchool, loggedUser }) => {
+      socket.on("check_balance", ({ id, loggedSchool, loggedUser }) => {
         loggedSchool = loggedSchool.replace(/ /g, "_") || "";
         try {
-          if (name && loggedSchool) {
+          if (id && loggedSchool) {
             conn.query(
-              `SELECT name, class, balance, payment_id, keyid, SUM(amount_paid) AS total, term, session FROM ${loggedSchool}_payment_record WHERE name = ${mysql.escape(
-                name
-              )} AND balance > 0 GROUP BY keyid`,
+              `SELECT name, class, balance, payment_id, keyid, SUM(amount_paid) AS total, term, session FROM ${loggedSchool}_payment_record WHERE student_id = '${id}' AND balance > 0 GROUP BY keyid`,
               (err, data) => {
                 if (err) {
                   console.log(err);

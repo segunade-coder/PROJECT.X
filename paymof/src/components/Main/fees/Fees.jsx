@@ -42,7 +42,7 @@ const Fees = () => {
   const [remark, setRemark] = useState("");
   const [term, setTerm] = useState("");
   const [session, setSession] = useState("");
-  const [DOG] = useState(dateArr.join("/"));
+  const [DOG, setDOG] = useState(dateArr.join("/"));
   const [DOP, setDOP] = useState("");
   const [balanceDate, setBalanceDate] = useState("");
   const [advance, setAdvance] = useState(0);
@@ -63,9 +63,22 @@ const Fees = () => {
   const [totalFee, setTotalFee] = useState(0);
   let [searchParams] = useSearchParams();
   const [url_fees, setUrl_fees] = useState(searchParams.get("id"));
-
+  const [viewName, setViewName] = useState("");
+  const [viewClass, setViewClass] = useState("");
+  const [viewPaymentId, setViewPaymentId] = useState("");
+  const [viewTotal, setViewTotal] = useState("");
+  const [viewBalance, setViewBalance] = useState("");
+  const [viewRemark, setViewRemark] = useState([]);
+  const [amountsPaid, setamountsPaid] = useState([]);
+  const [accountant, setAccountant] = useState("");
+  const [admNo, setAdmNo] = useState("");
+  const [totalPaid, setTotalPaid] = useState(0);
+  const viewdate = useRef([]);
+  const [studentId, setStudentId] = useState("");
+  // eslint-disable-next-line no-unused-vars
+  const [_, setViewDOB] = useState("");
   let autoCom = useRef();
-  let { url, loggedUser, notifications, io } = useContext(MainContext);
+  let { url, loggedUser, notifications, io, logo } = useContext(MainContext);
   useEffect(() => {
     if (url_fees !== "" && url_fees !== null) {
       notifications.loading("Loading.", "menasuda");
@@ -399,6 +412,7 @@ const Fees = () => {
   };
   let reset = () => {
     setBalanceUser("");
+    setBalanceClass("");
     setPaymentId("");
     setTotal("");
     setBalancePayment("");
@@ -409,8 +423,10 @@ const Fees = () => {
     setPaymentFor({ name: "" });
     setPaymentMethod({ name: "" });
     setDOP("");
+    setDOG("");
     setRemark("");
     setBalanceDate("");
+    setStudentId("");
   };
   let balanceFeeBtn = (key) => {
     reset();
@@ -423,9 +439,96 @@ const Fees = () => {
     setTerm({ name: balanceDetails.term });
     setSession(balanceDetails.session);
     setkeyId(balanceDetails.keyid);
+    setStudentId(balanceDetails.student_id);
     document.getElementsByClassName("fee-modal")[0].classList.add("show-modal");
     document.body.style.overflow = "hidden";
     window.scrollTo(0, parseInt(window.scrollY || "0") * -1);
+  };
+  let resetView = () => {
+    setViewName("");
+    setViewClass({ name: "" });
+    setViewPaymentId();
+    setViewTotal("");
+    setViewBalance("");
+    viewdate.current = [];
+    setViewRemark([]);
+    setamountsPaid([]);
+    setTotalPaid("");
+    setDOG("");
+    setViewDOB("");
+    setAccountant("");
+  };
+  let viewRecord = (key) => {
+    resetView();
+    if (key) {
+      let uniqid = uniqueId;
+      notifications.loading("Loading Printout...", uniqid);
+      fetch(`${url}/main/records/get-view?key=${key}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          toast.dismiss(uniqid);
+          if (data.status) {
+            let remarks = [];
+            let amountPaidArr = [];
+            let dateArr = [];
+            let totalPaid1 = 0;
+            let DOGArr = [];
+            let accountantArr = [];
+            // console.log(data.message);
+            setViewName(data.message[0].name);
+            setViewClass({ name: data.message[0].class.toUpperCase() });
+            setViewPaymentId(data.message[0].payment_id);
+            setViewTotal(data.message[0].expected_payment);
+            setViewBalance(data.message[0].balance);
+            setViewDOB(data.message[0].balance_date);
+            setAdmNo(data.adm);
+            if (data.message.length > 1) {
+              data.message.forEach((details) => {
+                dateArr.push(details.DOP);
+                accountantArr.push(details.accountant);
+                remarks.push(details.remark);
+                amountPaidArr.push(details.amount_paid);
+                totalPaid1 += parseInt(details.amount_paid);
+                DOGArr.push(details.created_at);
+              });
+              setAccountant(accountantArr);
+              setViewRemark(remarks);
+              setamountsPaid(amountPaidArr);
+              setTotalPaid(totalPaid1);
+              viewdate.current = dateArr;
+              setDOG(DOGArr);
+            } else {
+              setViewRemark([data.message[0].remark]);
+              viewdate.current = [data.message[0].DOP];
+              setamountsPaid([data.message[0].amount_paid]);
+              setTotalPaid(data.message[0].amount_paid);
+              setDOG([data.message[0].created_at]);
+              setAccountant([data.message[0]?.accountant]);
+            }
+            document
+              .getElementsByClassName("print-modal")[0]
+              .classList.add("show-modal");
+            document.body.style.overflow = "hidden";
+            window.scrollTo(0, parseInt(window.scrollY || "0") * -1);
+          } else {
+            notifications.warning(data.message, uniqid);
+          }
+        })
+        .catch((err) => {
+          toast.dismiss(uniqid);
+          notifications.warning("Error: Failed to fetch");
+          console.log(err);
+        });
+    }
+  };
+  let handlePrint2 = () => {
+    window.print();
   };
   let saveBalance = () => {
     if (
@@ -467,6 +570,7 @@ const Fees = () => {
             payment_method: paymentMethod.name.toLowerCase(),
             defaultWallet: defaultWallet.name.toLowerCase(),
             accountant: loggedUser.toLowerCase(),
+            student_id: studentId,
           }),
         })
           .then((res) => res.json())
@@ -489,6 +593,7 @@ const Fees = () => {
                 .classList.remove("show-modal");
               document.body.style.overflow = "auto";
               document.body.style.top = "";
+              viewRecord(keyId);
               reset();
             } else {
               notifications.warning(data.message, uniqueId);
@@ -613,6 +718,16 @@ const Fees = () => {
         </small>
       </div>
     );
+  };
+  const formatDate = (rawDate) => {
+    let date = new Date(rawDate);
+    return [
+      date.getDate() < 10 ? `0${date.getDate()}` : date.getDate(),
+      date.getUTCMonth() + 1 < 10
+        ? `0${date.getUTCMonth() + 1}`
+        : date.getUTCMonth() + 1,
+      date.getUTCFullYear(),
+    ].join("/");
   };
   return (
     <div className="__fees">
@@ -883,6 +998,104 @@ const Fees = () => {
             ></textarea>
           </div>
         </form>
+      </ModalCont>
+      <ModalCont
+        title={""}
+        classModal="print-modal"
+        btn="Print"
+        save={handlePrint2}
+      >
+        <div className="print-container">
+          <div className="img-cont">
+            <img src={logo} alt="logo" />
+          </div>
+          <h4 className="h5">School Fees Report</h4>
+          <div style={{ textAlign: "center" }}>
+            DATE & TIME &nbsp; {new Date(Date.now()).toLocaleDateString()}{" "}
+            &nbsp; {new Date(Date.now()).toLocaleTimeString()}
+          </div>
+          <hr />
+          <div className="student-info">
+            <h4 className="h5">Student Info</h4>
+            <div className="table-responsive">
+              <table className="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <td>{viewName?.toUpperCase()}</td>
+                    <th>Class</th>
+                    <td>{viewClass.name?.toUpperCase()}</td>
+                  </tr>
+                </thead>
+                <thead>
+                  <tr>
+                    <th>Payment ID</th>
+                    <td>{viewPaymentId}</td>
+                    <th>DOP</th>
+                    <td>{formatDate(viewdate?.current[0])}</td>
+                  </tr>
+                </thead>
+                {admNo !== "" ? (
+                  <thead>
+                    <tr>
+                      <th>Admission No</th>
+                      <td>{admNo !== "" ? admNo?.toUpperCase() : ""}</td>
+                    </tr>
+                  </thead>
+                ) : (
+                  ""
+                )}
+              </table>
+            </div>
+          </div>
+          <div className="fee-info">
+            <h4 className="h5">Fee Info</h4>
+            <div className="table-responsive">
+              <table className="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Paid</th>
+                    <th>Remark</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {viewRemark &&
+                    viewRemark?.map((re, index) => (
+                      <tr
+                        key={re + Math.random()}
+                        title={accountant[index]}
+                        className="tr"
+                      >
+                        <td>{formatDate(viewdate?.current[index])}</td>
+                        <td>{Number(amountsPaid[index])?.toLocaleString()}</td>
+                        <td className="last">{re?.toUpperCase()}</td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div className="others-cont">
+            <div className="others">
+              <div>Total Fees:</div>&#x20A6;
+              {Number(viewTotal)?.toLocaleString()}
+            </div>
+            <div className="others">
+              <div>Total Paid: </div>&#x20A6;
+              {Number(totalPaid)?.toLocaleString()}
+            </div>
+            <div className="others">
+              <div>Balance: </div>&#x20A6;
+              {Number(viewBalance)?.toLocaleString()}
+            </div>
+            <div className="others" style={{ textTransform: "capitalize" }}>
+              {" "}
+              <div>Cashier: </div>
+              {accountant[0]}
+            </div>
+          </div>
+        </div>
       </ModalCont>
     </div>
   );

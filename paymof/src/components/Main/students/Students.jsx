@@ -41,7 +41,7 @@ const Students = () => {
   const [classes, setClasses] = useState([]);
   const [sessionArray, setSessionArray] = useState([]);
   const [termArray, setTermArray] = useState([]);
-  let { url, notifications, io, loggedSchool } = useContext(MainContext);
+  let { url, notifications, io, loggedSchool, admin } = useContext(MainContext);
   const [name, setName] = useState();
   const [currentTerm, setCurrentTerm] = useState("");
   const [currentSession, setCurrentSession] = useState("");
@@ -1285,17 +1285,21 @@ const Students = () => {
           >
             <Ripple />
           </Button>
-          <Button
-            className="p-ripple"
-            onClick={(e) => showSelectFnc(e)}
-            icon="pi pi-arrow-up-right"
-            label="Promote"
-            // severity="success"
-            size="small"
-            style={{ width: "fit-content" }}
-          >
-            <Ripple />
-          </Button>
+          {admin ? (
+            <Button
+              className="p-ripple"
+              onClick={(e) => showSelectFnc(e)}
+              icon="pi pi-arrow-up-right"
+              label="Promote"
+              // severity="success"
+              size="small"
+              style={{ width: "fit-content" }}
+            >
+              <Ripple />
+            </Button>
+          ) : (
+            <></>
+          )}
         </div>
       </form>
       {showSelect && (
@@ -1555,18 +1559,24 @@ const Students = () => {
                     <span>{new Date(record.created_at).toDateString()}</span>
                   </span>
                   <span className="details-content">
-                    <button
-                      onClick={() => editRecord(record.id)}
-                      className="btn btn-light btn-sm mt-2"
-                    >
-                      <RiEdit2Line fill="orangered" /> Update
-                    </button>
-                    <button
-                      onClick={() => deleteRecord(record.id)}
-                      className="btn btn-danger btn-sm mt-2"
-                    >
-                      Delete
-                    </button>
+                    {admin ? (
+                      <>
+                        <button
+                          onClick={() => editRecord(record.id)}
+                          className="btn btn-light btn-sm mt-2"
+                        >
+                          <RiEdit2Line fill="orangered" /> Update
+                        </button>
+                        <button
+                          onClick={() => deleteRecord(record.id)}
+                          className="btn btn-danger btn-sm mt-2"
+                        >
+                          Delete
+                        </button>
+                      </>
+                    ) : (
+                      <></>
+                    )}
                     <button
                       onClick={(e) => copyGuardian(e, record?.guardian_id)}
                       className="btn btn-light btn-sm mt-2"

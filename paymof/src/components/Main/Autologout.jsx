@@ -14,7 +14,7 @@ const Autologout = ({ children }) => {
         window.removeEventListener(event, resetTimer);
       });
       logoutAction();
-    }, 5 * 60 * 1000);
+    }, 8 * 60 * 1000);
   };
   const resetTimer = () => {
     if (timer) clearTimeout(timer);

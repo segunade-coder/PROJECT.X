@@ -122,7 +122,7 @@ const findSearch = (req, res) => {
         searchId
       )} OR keyid = ${mysql.escape(
         searchId
-      )}) AND balance > 0 GROUP BY keyid ORDER BY created_at ASC`
+      )} AND balance > 0 GROUP BY keyid ORDER BY created_at ASC`
     )
       .then((data) => (total = data.length))
       .catch((err) => console.log(err));
@@ -264,6 +264,7 @@ const saveBalancePayment = (req, res) => {
     keyid,
     accountant,
     defaultWallet,
+    student_id,
   } = req.body;
 
   // chech if the variable are empty.
@@ -285,7 +286,7 @@ const saveBalancePayment = (req, res) => {
 
     return res.json({
       status: false,
-      message: "Please fill in all the textbox",
+      message: "Please fill in all the text box",
     });
 
     // if none of the variables are empty
@@ -301,6 +302,7 @@ const saveBalancePayment = (req, res) => {
     db.insert(`${req?.session?.databaseName}_payment_record`, {
       name: name.toLowerCase(),
       payment_id,
+      student_id,
       class: balanceClass.toLowerCase(),
       amount_paid,
       expected_payment,

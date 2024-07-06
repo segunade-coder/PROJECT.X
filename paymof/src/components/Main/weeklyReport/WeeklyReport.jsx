@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { MainContext } from "../Helpers/Context";
 import "./weeklyreport.css";
 import { MultiSelect } from "primereact/multiselect";
@@ -8,6 +8,7 @@ import { Button } from "primereact/button";
 import { Ripple } from "primereact/ripple";
 import { Dropdown } from "primereact/dropdown";
 import { useNavigate } from "react-router-dom";
+import ReactToPrint from "react-to-print";
 const Weekly = () => {
   const [filteredClass, setFilteredClass] = useState([]);
   const [classes, setClasses] = useState([]);
@@ -21,7 +22,7 @@ const Weekly = () => {
   const [sort, setSort] = useState("DOG");
   let { url, notifications, loggedSchool } = useContext(MainContext);
   const navigate = useNavigate();
-
+  const printComponent = useRef(null);
   let fetchFilters = () => {
     fetch(`${url}/main/payment/classes`, {
       method: "GET",
@@ -71,20 +72,6 @@ const Weekly = () => {
     fetchFilters();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [document.readyState]);
-
-  // let focusSelect = () => {
-  //   let tempArr = [];
-  //   if (!classes[0]?.label) {
-  //     classes.map((label) => {
-  //       label = label?.toUpperCase();
-  //       tempArr.push({ label, value: label });
-  //       console.log(label);
-  //       return 0;
-  //     });
-  //     console.log(tempArr);
-  //     setClasses(tempArr);
-  //   }
-  // };
 
   let createWeek = (e) => {
     e.preventDefault();
@@ -191,16 +178,7 @@ const Weekly = () => {
           options={terms}
           placeholder="Select term"
         />
-        {/* <select
-        >
-          <option value="">Term</option>
-          {terms &&
-            terms.map((elem) => (
-              <option value={elem.toUpperCase()} key={Math.random()}>
-                {elem.toUpperCase()}
-              </option>
-            ))}
-        </select> */}
+
         <Dropdown
           value={filteredSess}
           onChange={(e) => setFilteredSess(e.value)}
@@ -229,8 +207,36 @@ const Weekly = () => {
           </Button>
         </div>
       </form>
+      <ReactHTMLTableToExcel
+        id="xls-button"
+        className="xls-button btn btn-dark btn-sm"
+        table="table-to-xls"
+        filename={
+          "Weekly Report".replace(/ /g, "_") +
+          "_" +
+          new Date(Date.now()).toLocaleTimeString().replace(/ /g, "_")
+        }
+        sheet="tablexls"
+        buttonText="Download XLS"
+      />
+
+      <ReactToPrint
+        trigger={() => (
+          <Button
+            icon="pi pi-print"
+            size="small"
+            label="Print"
+            style={{ marginLeft: "1rem" }}
+          />
+        )}
+        content={() => printComponent.current}
+      />
       <div className="weekly-table table-responsive">
-        <table className="table table-bordered" id="table-to-xls">
+        <table
+          className="table table-bordered my-3 mx-2"
+          id="table-to-xls"
+          ref={printComponent}
+        >
           <thead className="thead">
             <tr className="colspan">
               <th colSpan={6}>
@@ -302,18 +308,6 @@ const Weekly = () => {
           </tbody>
         </table>
       </div>
-      <ReactHTMLTableToExcel
-        id="xls-button"
-        className="xls-button btn btn-dark btn-sm"
-        table="table-to-xls"
-        filename={
-          "Weekly Report".replace(/ /g, "_") +
-          "_" +
-          new Date(Date.now()).toLocaleTimeString().replace(/ /g, "_")
-        }
-        sheet="tablexls"
-        buttonText="Download XLS"
-      />
     </div>
   );
 };

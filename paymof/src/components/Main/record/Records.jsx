@@ -52,7 +52,7 @@ const Records = () => {
   let viewdate = useRef([]);
   let editKey = useRef("");
   let uniqueId = useId();
-  let { url, notifications, logo } = useContext(MainContext);
+  let { url, notifications, logo, admin } = useContext(MainContext);
   let fetchFilters = () => {
     fetch(`${url}/main/payment/classes`, {
       method: "GET",
@@ -919,18 +919,24 @@ const Records = () => {
                       >
                         View
                       </button>
-                      <button
-                        onClick={() => deleteRecord(record?.keyid)}
-                        className="btn btn-danger btn-sm mt-2"
-                      >
-                        Delete
-                      </button>
-                      <button
-                        onClick={() => editRecord(record?.keyid)}
-                        className="btn btn-light btn-sm mt-2"
-                      >
-                        <RiEdit2Line fill="orangered" /> Edit
-                      </button>
+                      {admin ? (
+                        <>
+                          <button
+                            onClick={() => deleteRecord(record?.keyid)}
+                            className="btn btn-danger btn-sm mt-2"
+                          >
+                            Delete
+                          </button>
+                          <button
+                            onClick={() => editRecord(record?.keyid)}
+                            className="btn btn-light btn-sm mt-2"
+                          >
+                            <RiEdit2Line fill="orangered" /> Edit
+                          </button>
+                        </>
+                      ) : (
+                        <></>
+                      )}
                       {Number(record?.balance) > 0 && (
                         <a
                           href={`fees?id=${record?.keyid}`}

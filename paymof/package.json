@@ -26,6 +26,7 @@
     "react-icons": "^4.9.0",
     "react-loader-spinner": "^5.3.4",
     "react-router-dom": "^6.11.2",
+    "react-to-print": "^2.14.15",
     "socket.io-client": "^4.6.1",
     "vite-plugin-pwa": "^0.16.4",
     "xlsx": "^0.18.5"

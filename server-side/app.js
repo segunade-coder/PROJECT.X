@@ -6,6 +6,8 @@ const conn = require("./connections/conn");
 const session = require("express-session");
 const server = require("http").createServer(app);
 const chalk = require("chalk");
+const helmet = require("helmet");
+const compression = require("compression");
 let WebSok = require("./connections/webSok");
 const MysqlStore = require("express-mysql-session")(session);
 const cors = require("cors");
@@ -66,9 +68,11 @@ const io = require("socket.io")(server, {
 });
 
 app.set("trust proxy", 1);
-if (production) {
-  app.use(express.static(path.resolve(__dirname, "./dist")));
-}
+app.use(compression());
+app.use(helmet());
+// if (production) {
+app.use(express.static(path.resolve(__dirname, "./dist")));
+// }
 app.use(
   cors({
     origin: origins,
@@ -145,9 +149,6 @@ server.listen(PORT, (err) => {
     throw err;
   }
   console.clear();
-  console.log(chalk.green(`compiled succesfully!`));
+  console.log(chalk.green(`compiled successfully!`));
   logToFile("App is live. ✨");
-  console.log("");
-  console.log(`You can view app in the browser.`);
-  console.log("");
 });

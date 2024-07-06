@@ -9,6 +9,7 @@ import { Ripple } from "primereact/ripple";
 import { useNavigate } from "react-router-dom";
 import ModalCont from "../../small_comps/modal/ModalCont";
 import toast from "react-hot-toast";
+import ReactToPrint from "react-to-print";
 const Debtors = () => {
   const [filteredClass, setFilteredClass] = useState({ name: "" });
   const [classes, setClasses] = useState([]);
@@ -19,6 +20,7 @@ const Debtors = () => {
   const [sort, setSort] = useState({ name: "DEBTORS" });
   const [debtors, setDebtors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [others, setOthers] = useState([]);
   const [paymentForArr, setPaymentForArr] = useState([]);
   const [overAllTotal, setOverAllTotal] = useState(0);
@@ -37,6 +39,7 @@ const Debtors = () => {
   const [amountsPaid, setamountsPaid] = useState([]);
   const [totalPaid, setTotalPaid] = useState(0);
   const [accountant, setAccountant] = useState([]);
+  const printComponent = useRef(null);
   const formatDate = (rawDate) => {
     let date = new Date(rawDate);
     return [
@@ -399,10 +402,22 @@ const Debtors = () => {
                 sheet="tablexls"
                 buttonText="Download XLS"
               />
+              <ReactToPrint
+                trigger={() => (
+                  <Button
+                    icon="pi pi-print"
+                    size="small"
+                    label="Print"
+                    style={{ marginLeft: "1rem" }}
+                  />
+                )}
+                content={() => printComponent.current}
+              />
             </div>
             <table
-              className="table table-responsive table-bordered"
+              className="table table-responsive table-bordered my-3 mx-2"
               id="table-to-xls"
+              ref={printComponent}
             >
               <thead className="thead-dark">
                 <tr>
@@ -447,11 +462,7 @@ const Debtors = () => {
                         style={{ cursor: "pointer" }}
                       >
                         {record?.name?.toUpperCase()}{" "}
-                        <small>
-                          {record?.expected_payment && (
-                            <b>({others[index]?.total})</b>
-                          )}
-                        </small>{" "}
+                       
                       </td>
                       <td>{record?.payment_id} </td>
                       <td>{record?.class?.toUpperCase()} </td>

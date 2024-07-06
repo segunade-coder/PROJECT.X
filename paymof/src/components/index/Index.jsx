@@ -24,7 +24,7 @@ const Index = () => {
   document.title = "Index | Paymof";
   const [schoolName, setSchoolName] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [showElem, setShowElem] = useState(true);
+  const [showElem, setShowElem] = useState(false);
   const [adminName, setAdminName] = useState("");
   const [adminCode, setAdminCode] = useState("");
   const [phone, setPhone] = useState("");
